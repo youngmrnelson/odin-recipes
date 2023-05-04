@@ -1,0 +1,17 @@
+.nav {
+    border-bottom: 1px solid var(--gray-3);
+
+    &-btn {
+        @media(min-width: 1024px) {
+            display: none;
+        }
+    }
+
+    &-link {
+        display: none;
+
+        @media(min-width: 1024px) {
+            display: flex;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+@use 'reset';
+@use 'layout';
+@use 'utilities';
+@use 'components';
+@use 'typography';
+@use 'navigation';
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
