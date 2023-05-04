@@ -1,0 +1,13 @@
+@font-face {
+    font-family:"Norse-Bold";
+    src:url("../assets/fonts/Norse-Bold.eot?") format("eot"),
+        url("../assets/fonts/Norse-Bold.woff") format("woff"),
+        url("../assets/fonts/Norse-Bold.ttf") format("truetype"),
+        url("../assets/fonts/Norse-Bold.svg#Norse-Bold") format("svg");
+    font-weight:normal;
+    font-style:normal;
+}
+
+body {
+    font-family: 'Norse-Bold';
+}
