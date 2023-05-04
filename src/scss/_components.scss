@@ -3,5 +3,12 @@
     cursor: pointer;
     display: inline-block;
     border: none;
+    border-radius: 0 10px 0 10px;
     background: transparent;
+    font-size: 2rem;
+
+    &-main {
+        background: var(--odin-primary);
+        color: #fff;
+    }
 }

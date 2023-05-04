@@ -8,6 +8,13 @@
     }
 }
 
+// Grid Layouts
+.grid {
+    &-hero {
+        grid-template-columns: 1fr;
+    }
+}
+
 // Align Items
 .ai {
     &-c {
@@ -20,5 +27,9 @@
 .jc {
     &-sb {
         justify-content: space-between;
+    }
+
+    &-c {
+        justify-content: center;
     }
 }

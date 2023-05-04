@@ -24,6 +24,7 @@
     <!-- Navigation -->
     <nav class="nav py-0 pi-2">
       <div class="container m-auto flex flex-jc--sb ai-c jc-sb">
+        <!-- Nav Logo -->
         <a href="index.html" class="h h-nav flex ai-c gap-1"
           ><img
             src="images/odin-colored.png"
@@ -32,27 +33,46 @@
           />
           Odin Recipes</a
         >
+        <!-- Nav List -->
         <ul class="nav-links flex gap-3">
           <li>
+            <!-- Nav Menu Btn -->
             <button class="p-main btn p-1 nav-btn">
-              <i aria-label="Open Menu" class="fa-solid fa-burger"></i>
+              <i aria-label="Open Menu" class="fa-solid fa-burger fa-2x"></i>
             </button>
           </li>
+          <!-- Nav Links -->
           <li class="nav-link">
-            <a href="#about" class="p-main a-nav a-current">About</a>
+            <a href="#about" class="p-main a-nav"
+              >About
+              <i
+                aria-hidden="true"
+                class="fa-regular fa-circle-question i-nav ml-0"
+              ></i
+            ></a>
           </li>
           <li class="nav-link">
-            <a href="#recipe-of-day" class="p-main a-nav">Recipes of the Day</a>
+            <a href="#recipe-of-day" class="p-main a-nav"
+              >Recipes of the Day
+              <i aria-hidden="true" class="fa-solid fa-award i-nav ml-0"></i
+            ></a>
           </li>
           <li class="nav-link">
-            <a href="#search-recipes" class="p-main a-nav">Find Recipes</a>
+            <a href="#search-recipes" class="p-main a-nav"
+              >Find Recipes
+              <i
+                aria-hidden="true"
+                class="fa-solid fa-magnifying-glass i-nav ml-0"
+              ></i
+            ></a>
           </li>
           <li class="nav-link">
             <a
               href="https://www.linkedin.com/in/daniel-nelson-9151a6212/"
               target="_blank"
               class="p-main a-nav"
-              >Daniel Nelson / <i class="fa-brands fa-linkedin-in"></i
+              >Daniel Nelson /
+              <i aria-hidden="true" class="fa-brands fa-linkedin-in"></i
             ></a>
           </li>
           <li class="nav-link">
@@ -60,11 +80,22 @@
               href="https://github.com/youngmrnelson"
               target="_blank"
               class="p-main a-nav"
-              >View The Code / <i class="fa-brands fa-github"></i
+              >View The Code /
+              <i aria-hidden="true" class="fa-brands fa-github"></i
             ></a>
           </li>
         </ul>
       </div>
     </nav>
+    <!-- Hero Section -->
+    <section class="bg-hero height-half">
+      <div class="container m-auto grid ai-c ta-c">
+        <img src="./images/odin-lined.png" class="img img-hero" />
+        <h1 class="h h-main">Odin Recipes</h1>
+        <p class="p-subtitle">Millions of Recipes,</p>
+        <p class="p-subtitle p-highlight">One Search Engine</p>
+        <a href="#about" class="btn btn-main py-0 pi-2">Let's Get Cooking</a>
+      </div>
+    </section>
   </body>
 </html>
