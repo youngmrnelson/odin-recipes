@@ -5,6 +5,13 @@
     // FD-C
     &-fd--c {
         flex-direction: column;
+
+        // Mobile - To Row
+        &-mobile {
+            @media(min-width: 767px) {
+                flex-direction: row;
+            }
+        }
     }
 }
 
