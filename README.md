@@ -2,6 +2,10 @@
 
 This is a project to create a simple recipe website with multiple recipes. The website will have an index page and individual recipe pages.
 
+## Live Preview
+
+[https://youngmrnelson.github.io/odin-recipes/](https://youngmrnelson.github.io/odin-recipes/)
+
 ## Iteration 1: Initial Structure
 
 Within the `odin-recipes` directory, create an `index.html` file.
