@@ -70,7 +70,12 @@
     }
 
     &-step {
-        width: 400px;
+        display: none;
+
+        @media (min-width: 767px) {
+            display: block;
+            width: 400px;
+        }
     }
 }
 

@@ -20,8 +20,10 @@
     display: grid; 
 
     // GC-2
-    &-gc--2 {
-        grid-template-columns: 1fr 1fr;
+    @media (min-width: 767px) {
+        &-gc--2 {
+            grid-template-columns: 1fr 1fr;
+        }
     }
 }
 

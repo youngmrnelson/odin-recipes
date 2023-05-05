@@ -68,8 +68,10 @@ table {
 .grid {
   display: grid;
 }
-.grid-gc--2 {
-  grid-template-columns: 1fr 1fr;
+@media (min-width: 767px) {
+  .grid-gc--2 {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .ai-c {
@@ -148,7 +150,13 @@ table {
   }
 }
 .img-step {
-  width: 400px;
+  display: none;
+}
+@media (min-width: 767px) {
+  .img-step {
+    display: block;
+    width: 400px;
+  }
 }
 
 .gap-1 {
@@ -303,7 +311,7 @@ table {
 }
 .recipe-stat {
   color: var(--gray-7);
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   border-bottom: 1px solid var(--gray-4);
 }
 .recipe-stat-alt {
