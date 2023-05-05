@@ -63,29 +63,6 @@ table {
 .grid {
   display: grid;
 }
-.grid-hero {
-  grid-template-columns: 1fr;
-}
-@media (min-width: 767px) {
-  .grid-hero {
-    grid-template-areas: "img header header" "img subtitle-1 suntitle-1" "img subtitle-2 suntitle-2" "btn btn btn ";
-  }
-  .grid-hero-img {
-    grid-area: img;
-  }
-  .grid-hero-header {
-    grid-area: header;
-  }
-  .grid-hero-subtitle-1 {
-    grid-area: subtitle-1;
-  }
-  .grid-hero-subtitle-2 {
-    grid-area: subtitle-2;
-  }
-  .grid-hero-btn {
-    grid-area: btn;
-  }
-}
 
 .ai-c {
   align-items: center;
@@ -98,13 +75,18 @@ table {
   justify-content: center;
 }
 
+.p-rel {
+  position: relative;
+}
+
 :root {
   --gray-9: #212529;
   --gray-7: #495057;
+  --gray-6: #868e96;
   --gray-3: #dee2e6;
   --gray-0: #f8f9fa;
   --odin-primary: #ce973e;
-  --odin-light: #d8ac65;
+  --odin-light: #faf5ec;
   --transition: all 0.25s;
 }
 
@@ -128,6 +110,19 @@ table {
   width: 100%;
   z-index: -1;
 }
+@media (min-width: 767px) {
+  .bg-hero::after {
+    content: "";
+    background: url("../images/odin-lined.png") no-repeat center left/contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    filter: brightness(0.85);
+  }
+}
 
 .height-half {
   height: 50vh;
@@ -146,7 +141,10 @@ table {
 @media (min-width: 767px) {
   .img-hero {
     display: block;
-    width: 100px;
+    position: absolute;
+    top: 25px;
+    left: 150px;
+    width: 125px;
   }
 }
 
@@ -171,6 +169,9 @@ table {
 }
 .py-3 {
   padding-block: 44px;
+}
+.py-4 {
+  padding-block: 80px;
 }
 
 .pi-1 {
@@ -254,14 +255,20 @@ table {
 .btn {
   cursor: pointer;
   display: inline-block;
-  border: none;
+  border: 2px solid transparent;
   border-radius: 0 10px 0 10px;
   background: transparent;
   font-size: 2rem;
+  transition: var(--transition);
 }
 .btn-main {
   background: var(--odin-primary);
   color: #fff;
+}
+.btn-main:hover {
+  background: var(--odin-light);
+  color: var(--odin-primary);
+  border-color: var(--odin-primary);
 }
 
 @font-face {
@@ -281,7 +288,7 @@ a {
 }
 
 .a-nav {
-  color: var(--gray-7);
+  color: var(--gray-6);
   border-bottom: 2px solid transparent;
   transition: var(--transition);
 }
@@ -294,8 +301,9 @@ a {
   font-family: "Norse-Bold", cursive;
 }
 .h-main {
-  font-size: 4.4rem;
+  font-size: 6.4rem;
   color: #fff;
+  border-bottom: 4px solid var(--odin-primary);
 }
 .h-nav {
   font-size: 2.4rem;
@@ -307,7 +315,7 @@ a {
 }
 .p-subtitle {
   text-transform: uppercase;
-  font-size: 2.4rem;
+  font-size: 3.2rem;
   font-weight: 600;
   color: #fff;
 }

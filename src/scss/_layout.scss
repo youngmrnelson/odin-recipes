@@ -11,25 +11,6 @@
 // Grid Layouts
 .grid {
     display: grid; 
-
-    &-hero {
-        grid-template-columns: 1fr;
-        
-        @media(min-width: 767px) {
-            grid-template-areas: 
-                'img header header'
-                'img subtitle-1 suntitle-1'
-                'img subtitle-2 suntitle-2'
-                'btn btn btn '
-            ;
-            
-            &-img { grid-area: img; }
-            &-header { grid-area: header }
-            &-subtitle-1 { grid-area: subtitle-1 }
-            &-subtitle-2 { grid-area: subtitle-2 }
-            &-btn { grid-area: btn }
-        }
-    }
 }
 
 // Align Items
@@ -49,4 +30,9 @@
     &-c {
         justify-content: center;
     }
+}
+
+// Position
+.p {
+    &-rel { position: relative; }
 }

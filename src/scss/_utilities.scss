@@ -2,10 +2,11 @@
 :root {
     --gray-9: #212529;
     --gray-7: #495057;
+    --gray-6: #868e96;
     --gray-3: #dee2e6;
     --gray-0: #f8f9fa;
     --odin-primary: #ce973e;
-    --odin-light: #d8ac65;
+    --odin-light: #faf5ec;
     --transition: all 0.25s;
 }
 
@@ -20,17 +21,31 @@
 .bg {
     &-hero {
         position: relative;
-    }
 
-    &-hero::before {
-        content: "";
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/header-img.jpg') no-repeat center center/cover;
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        z-index: -1;
+        &::before {
+            content: "";
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/header-img.jpg') no-repeat center center/cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+        }
+        
+        @media(min-width: 767px) {
+            &::after {
+                content: "";
+                background: url('../images/odin-lined.png') no-repeat center left/contain;
+                position:absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                z-index: -1;
+                filter: brightness(0.85)
+            }
+        }
     }
 }
 
@@ -55,7 +70,10 @@
 
         @media(min-width: 767px) {
             display: block;
-            width: 100px;
+            position: absolute;
+            top: 25px;
+            left: 150px;
+            width: 125px;
         }
     }
 }
@@ -73,6 +91,7 @@
     &-1 { padding-block: 24px }
     &-2 { padding-block: 32px }
     &-3 { padding-block: 44px }
+    &-4 { padding-block: 80px }
 }
 
 .pi {

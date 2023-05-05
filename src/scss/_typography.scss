@@ -23,7 +23,7 @@ a {
 
 .a {
     &-nav {
-        color: var(--gray-7);
+        color: var(--gray-6);
         border-bottom: 2px solid transparent;
         transition: var(--transition);
     }
@@ -40,8 +40,9 @@ a {
     font-family: 'Norse-Bold', cursive;
 
     &-main {
-        font-size: 4.4rem;
+        font-size: 6.4rem;
         color: #fff;
+        border-bottom: 4px solid var(--odin-primary);
     }
 
     &-nav {
@@ -58,7 +59,7 @@ a {
 
     &-subtitle {
         text-transform: uppercase;
-        font-size: 2.4rem;
+        font-size: 3.2rem;
         font-weight: 600;
         color: #fff;
     }

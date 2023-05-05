@@ -2,13 +2,20 @@
 .btn {
     cursor: pointer;
     display: inline-block;
-    border: none;
+    border: 2px solid transparent;
     border-radius: 0 10px 0 10px;
     background: transparent;
     font-size: 2rem;
+    transition: var(--transition);
 
     &-main {
         background: var(--odin-primary);
         color: #fff;
+
+        &:hover {
+            background: var(--odin-light);
+            color: var(--odin-primary);
+            border-color: var(--odin-primary);
+        }
     }
 }
