@@ -59,6 +59,11 @@ table {
 .flex-fd--c {
   flex-direction: column;
 }
+@media (min-width: 767px) {
+  .flex-fd--c-mobile {
+    flex-direction: row;
+  }
+}
 
 .grid {
   display: grid;
