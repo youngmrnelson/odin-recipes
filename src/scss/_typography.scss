@@ -1,5 +1,5 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
 @font-face {
     font-family:"Norse-Bold";
     src:url("../assets/fonts/Norse-Bold.eot?") format("eot"),
@@ -13,7 +13,7 @@
 // General Styling
 body {
     color: var(--gray-9);
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.5;
 }
 
@@ -81,6 +81,17 @@ a {
         font-size: 2.4rem;
         font-weight: 300;
         color: var(--gray-6);
+    }
+
+    &-step-number {
+        font-size: 4.4rem;
+        font-weight: 600;
+        color: var(--gray-4);
+    }
+
+    &-step-title {
+        font-size: 3.2rem;
+        font-weight: 800;
     }
 }
 

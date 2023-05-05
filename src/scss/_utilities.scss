@@ -35,6 +35,10 @@
             z-index: -1;
         }
     }
+
+    &-light {
+        background: var(--odin-light);
+    }
 }
 
 // Height
@@ -63,6 +67,10 @@
             left: 150px;
             width: 125px;
         }
+    }
+
+    &-step {
+        width: 400px;
     }
 }
 
@@ -132,4 +140,11 @@
 .ta {
     &-c { text-align: center }
     &-r { text-align: right }
+}
+
+// Place Self
+.ps {
+    &-c {
+        place-self: center;
+    }
 }

@@ -99,30 +99,28 @@
       </div>
     </section>
     <!-- Main Section -->
-    <main class="my-4">
+    <main>
       <!-- About Section -->
-      <section id="about">
-        <!-- Header -->
+      <section id="about" class="my-4">
+        <!-- About: Header -->
         <header class="ta-c">
           <div class="container m-auto">
             <p class="p p-subheader">What's the deal with...</p>
             <h2 class="h h-header">Odin Recipes?</h2>
           </div>
         </header>
-        <!-- About Content -->
+        <!-- About: Content -->
         <article class="my-4">
-          <div class="container-secondary m-auto">
+          <div class="container-secondary m-auto p-2">
             <p class="p p-main mb-3">
               Welcome to Odin Recipes, the first project in
               <a href="#" target="_blank" class="a-main">The Odin Project's</a>
               curriculum. This project utilizes an external API to search for
               cooking recipes by name, ingredients, cuisine type, dietary
               restrictions, and more. By utilizing an external API, the website
-              would have access to a vast database of recipes.
-            </p>
-            <p class="p p-main mb-3">
-              If you enjoyed your experience here and would like to learn more
-              about me or see more of my work, please feel free to check out my
+              would have access to a vast database of recipes. If you enjoyed
+              your experience here and would like to learn more about me or see
+              more of my work, please feel free to check out my
               <a
                 href="https://github.com/youngmrnelson"
                 target="_blank"
@@ -142,82 +140,144 @@
           </div>
         </article>
       </section>
+      <!-- How To Use Section -->
+      <section id="how-to-use">
+        <!-- How To Use: Header -->
+        <header class="ta-c my-4">
+          <div class="container m-auto">
+            <p class="p p-subheader">How Odin Recipes...</p>
+            <h2 class="h h-header">Works For You</h2>
+          </div>
+        </header>
+        <!-- How To Use: Content -->
+        <div class="container m-auto p-2">
+          <!-- How To Use: Step One -->
+          <article class="htu grid grid-gc--2 mb-4 gap-3">
+            <div class="ps-c">
+              <p class="p-step-title p-rel">
+                <span class="p-step-number">01.</span> Search Your Favorite
+                Dishes
+              </p>
+              <p class="p-main htu-description">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Adipisci, minima?
+              </p>
+            </div>
+            <img src="images/header-img.jpg" alt="" class="img img-step ps-c" />
+          </article>
+          <!-- How To Use: Step Two -->
+          <article class="htu grid grid-gc--2 mb-4 gap-3">
+            <img src="images/header-img.jpg" alt="" class="img img-step ps-c" />
+            <div class="ps-c">
+              <p class="p-step-title p-rel">
+                <span class="p-step-number">02.</span> Save Your Favorite
+                Recipes
+              </p>
+              <p class="p-main htu-description">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Adipisci, minima?
+              </p>
+            </div>
+          </article>
+          <!-- How To Use: Step Three -->
+          <article class="htu grid grid-gc--2 mb-4 gap-3">
+            <div class="ps-c">
+              <p class="p-step-title p-rel">
+                <span class="p-step-number">03.</span> Chef It Up
+              </p>
+              <p class="p-main htu-description">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Adipisci, minima?
+              </p>
+            </div>
+            <img src="images/header-img.jpg" alt="" class="img img-step ps-c" />
+          </article>
+        </div>
+      </section>
       <!-- Recipes of the Day Section -->
       <section id="recipes-of-day">
-        <!-- Header -->
+        <!-- Recipes of the Day: Header -->
         <header class="ta-c">
           <div class="container m-auto">
             <p class="p p-subheader">Check out the...</p>
             <h2 class="h h-header">Recipes of the Day</h2>
           </div>
         </header>
-        <!-- Content -->
-        <section class="my-4">
-          <div
-            class="container m-auto flex flex-fd--c flex-fd--c-mobile jc-sb ai-c gap-3 p-2"
-          >
-            <!-- Recipe Card -->
-            <figure class="recipe p-2">
-              <img
-                src="images/recipes/recipe-of-day-1.jpg"
-                alt=""
-                class="img recipe-img"
-              />
-              <article class="recipe-title-container">
-                <p class="recipe-title py-0">Recipe</p>
-                <p class="recipe-stat py-0">
-                  <span class="recipe-stat-alt">113</span> Calories
-                </p>
-                <p class="recipe-stat py-0">
-                  <span class="recipe-stat-alt">12</span> Ingredients
-                </p>
-                <a href="#" target="_blank" class="recipe-link py-0"
-                  >Full Recipe</a
-                >
-              </article>
-            </figure>
-            <!-- Recipe Card -->
-            <figure class="recipe p-2">
-              <img
-                src="images/recipes/recipe-of-day-1.jpg"
-                alt=""
-                class="img recipe-img"
-              />
-              <article class="recipe-title-container">
-                <p class="recipe-title py-0">Recipe</p>
-                <p class="recipe-stat py-0">
-                  <span class="recipe-stat-alt">113</span> Calories
-                </p>
-                <p class="recipe-stat py-0">
-                  <span class="recipe-stat-alt">12</span> Ingredients
-                </p>
-                <a href="#" target="_blank" class="recipe-link py-0"
-                  >Full Recipe</a
-                >
-              </article>
-            </figure>
-            <!-- Recipe Card -->
-            <figure class="recipe p-2">
-              <img
-                src="images/recipes/recipe-of-day-1.jpg"
-                alt=""
-                class="img recipe-img"
-              />
-              <article class="recipe-title-container">
-                <p class="recipe-title py-0">Recipe</p>
-                <p class="recipe-stat py-0">
-                  <span class="recipe-stat-alt">113</span> Calories
-                </p>
-                <p class="recipe-stat py-0">
-                  <span class="recipe-stat-alt">12</span> Ingredients
-                </p>
-                <a href="#" target="_blank" class="recipe-link py-0"
-                  >Full Recipe</a
-                >
-              </article>
-            </figure>
+        <!-- Recipes of the Day: Content -->
+        <div
+          class="container m-auto flex flex-fd--c flex-fd--c-mobile jc-sb ai-c gap-3 my-4 p-2"
+        >
+          <!-- Recipe Card -->
+          <figure class="recipe p-2">
+            <img
+              src="images/recipes/recipe-of-day-1.jpg"
+              alt=""
+              class="img recipe-img"
+            />
+            <article class="recipe-title-container">
+              <p class="recipe-title py-0">Recipe</p>
+              <p class="recipe-stat py-0">
+                <span class="recipe-stat-alt">113</span> Calories
+              </p>
+              <p class="recipe-stat py-0">
+                <span class="recipe-stat-alt">12</span> Ingredients
+              </p>
+              <a href="#" target="_blank" class="recipe-link py-0"
+                >Full Recipe</a
+              >
+            </article>
+          </figure>
+          <!-- Recipe Card -->
+          <figure class="recipe p-2">
+            <img
+              src="images/recipes/recipe-of-day-1.jpg"
+              alt=""
+              class="img recipe-img"
+            />
+            <article class="recipe-title-container">
+              <p class="recipe-title py-0">Recipe</p>
+              <p class="recipe-stat py-0">
+                <span class="recipe-stat-alt">113</span> Calories
+              </p>
+              <p class="recipe-stat py-0">
+                <span class="recipe-stat-alt">12</span> Ingredients
+              </p>
+              <a href="#" target="_blank" class="recipe-link py-0"
+                >Full Recipe</a
+              >
+            </article>
+          </figure>
+          <!-- Recipe Card -->
+          <figure class="recipe p-2">
+            <img
+              src="images/recipes/recipe-of-day-1.jpg"
+              alt=""
+              class="img recipe-img"
+            />
+            <article class="recipe-title-container">
+              <p class="recipe-title py-0">Recipe</p>
+              <p class="recipe-stat py-0">
+                <span class="recipe-stat-alt">113</span> Calories
+              </p>
+              <p class="recipe-stat py-0">
+                <span class="recipe-stat-alt">12</span> Ingredients
+              </p>
+              <a href="#" target="_blank" class="recipe-link py-0"
+                >Full Recipe</a
+              >
+            </article>
+          </figure>
+        </div>
+      </section>
+      <!-- Recipe Search Section -->
+      <section id="recipe-search" class="bg-light py-2">
+        <!-- Recipe Search Header -->
+        <header class="ta-c">
+          <div class="container m-auto">
+            <p class="p p-subheader">Let's get cooking...</p>
+            <h2 class="h h-header">Recipe Search</h2>
           </div>
-        </section>
+        </header>
       </section>
     </main>
   </body>
