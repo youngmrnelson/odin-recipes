@@ -3,7 +3,9 @@
     --gray-9: #212529;
     --gray-7: #495057;
     --gray-6: #868e96;
+    --gray-4: #ced4da;
     --gray-3: #dee2e6;
+    --gray-1: #f1f3f5;
     --gray-0: #f8f9fa;
     --odin-primary: #ce973e;
     --odin-light: #faf5ec;
@@ -31,20 +33,6 @@
             height: 100%;
             width: 100%;
             z-index: -1;
-        }
-        
-        @media(min-width: 767px) {
-            &::after {
-                content: "";
-                background: url('../images/odin-lined.png') no-repeat center left/contain;
-                position:absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                z-index: -1;
-                filter: brightness(0.85)
-            }
         }
     }
 }

@@ -49,6 +49,11 @@ a {
         font-size: 2.4rem;
         color: var(--gray-9);
     }
+
+    &-header {
+        font-size: 3.2rem;
+        color: var(--gray-9);
+    }
 }
 
 // Paragraphs
@@ -59,9 +64,15 @@ a {
 
     &-subtitle {
         text-transform: uppercase;
-        font-size: 3.2rem;
+        font-size: 2.4rem;
         font-weight: 600;
         color: #fff;
+    }
+
+    &-subheader {
+        font-size: 2.4rem;
+        font-weight: 300;
+        color: var(--gray-6);
     }
 }
 

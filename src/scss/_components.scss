@@ -19,3 +19,51 @@
         }
     }
 }
+
+// Recipe Cards
+.recipe {
+    background: var(--gray-1);
+    border: 1px solid var(--gray-4);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: var(--transition);
+
+    &:hover {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        transform: translateY(-2px);
+    }
+
+    &-img {
+        width: 250px;
+    }
+
+    &-title-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &-title {
+        font-size: 2rem;
+        font-weight: 600;
+        border-bottom: 1px solid var(--gray-4);
+        grid-column: 1 / -1;
+    }
+
+    &-stat {
+        color: var(--gray-7);
+        font-size: 1.8rem;
+        border-bottom: 1px solid var(--gray-4);
+
+        &-alt {
+            color: var(--odin-primary);
+            font-weight: 600;
+        }
+    }
+    
+    &-link {
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: var(--odin-primary);
+        border-bottom: 2px solid var(--odin-primary);
+        place-self: start;
+    }
+}

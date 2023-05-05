@@ -83,7 +83,9 @@ table {
   --gray-9: #212529;
   --gray-7: #495057;
   --gray-6: #868e96;
+  --gray-4: #ced4da;
   --gray-3: #dee2e6;
+  --gray-1: #f1f3f5;
   --gray-0: #f8f9fa;
   --odin-primary: #ce973e;
   --odin-light: #faf5ec;
@@ -109,19 +111,6 @@ table {
   height: 100%;
   width: 100%;
   z-index: -1;
-}
-@media (min-width: 767px) {
-  .bg-hero::after {
-    content: "";
-    background: url("../images/odin-lined.png") no-repeat center left/contain;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    filter: brightness(0.85);
-  }
 }
 
 .height-half {
@@ -271,6 +260,46 @@ table {
   border-color: var(--odin-primary);
 }
 
+.recipe {
+  background: var(--gray-1);
+  border: 1px solid var(--gray-4);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: var(--transition);
+}
+.recipe:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transform: translateY(-2px);
+}
+.recipe-img {
+  width: 250px;
+}
+.recipe-title-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.recipe-title {
+  font-size: 2rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--gray-4);
+  grid-column: 1/-1;
+}
+.recipe-stat {
+  color: var(--gray-7);
+  font-size: 1.8rem;
+  border-bottom: 1px solid var(--gray-4);
+}
+.recipe-stat-alt {
+  color: var(--odin-primary);
+  font-weight: 600;
+}
+.recipe-link {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--odin-primary);
+  border-bottom: 2px solid var(--odin-primary);
+  place-self: start;
+}
+
 @font-face {
   font-family: "Norse-Bold";
   src: url("../assets/fonts/Norse-Bold.eot?") format("eot"), url("../assets/fonts/Norse-Bold.woff") format("woff"), url("../assets/fonts/Norse-Bold.ttf") format("truetype"), url("../assets/fonts/Norse-Bold.svg#Norse-Bold") format("svg");
@@ -309,15 +338,24 @@ a {
   font-size: 2.4rem;
   color: var(--gray-9);
 }
+.h-header {
+  font-size: 3.2rem;
+  color: var(--gray-9);
+}
 
 .p-main {
   font-size: 1.8rem;
 }
 .p-subtitle {
   text-transform: uppercase;
-  font-size: 3.2rem;
+  font-size: 2.4rem;
   font-weight: 600;
   color: #fff;
+}
+.p-subheader {
+  font-size: 2.4rem;
+  font-weight: 300;
+  color: var(--gray-6);
 }
 
 .i-nav {
