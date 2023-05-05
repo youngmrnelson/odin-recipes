@@ -33,6 +33,14 @@ a {
         color: var(--gray-9);
         border-color: var(--odin-primary);
     }
+
+    &-main {
+        color: var(--odin-primary);
+
+        &:hover {
+            filter: brightness(90%);
+        }
+    }
 }
 
 // Headings
