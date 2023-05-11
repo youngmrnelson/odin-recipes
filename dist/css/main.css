@@ -114,7 +114,7 @@ table {
 }
 .bg-hero::before {
   content: "";
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/header-img.jpg") no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/header-img.jpg") no-repeat center 30%/cover;
   position: absolute;
   top: 0;
   left: 0;
@@ -267,6 +267,10 @@ table {
   place-self: center;
 }
 
+.bottom-line {
+  border-bottom: 4px solid var(--odin-primary);
+}
+
 .btn {
   cursor: pointer;
   display: inline-block;
@@ -341,6 +345,7 @@ body {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 .a-nav {
@@ -365,7 +370,6 @@ a {
 .h-main {
   font-size: 6.4rem;
   color: #fff;
-  border-bottom: 4px solid var(--odin-primary);
 }
 .h-nav {
   font-size: 2.4rem;
@@ -377,7 +381,7 @@ a {
 }
 
 .p-main {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 .p-subtitle {
   text-transform: uppercase;

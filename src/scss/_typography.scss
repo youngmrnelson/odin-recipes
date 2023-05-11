@@ -19,6 +19,7 @@ body {
 
 a { 
     text-decoration: none; 
+    color: inherit;
 }
 
 .a {
@@ -50,7 +51,6 @@ a {
     &-main {
         font-size: 6.4rem;
         color: #fff;
-        border-bottom: 4px solid var(--odin-primary);
     }
 
     &-nav {
@@ -67,7 +67,7 @@ a {
 // Paragraphs
 .p {
     &-main {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     &-subtitle {

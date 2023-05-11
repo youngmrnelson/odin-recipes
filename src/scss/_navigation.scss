@@ -7,8 +7,8 @@
         }
     }
 
-    &-link {
-        display: none;
+    &-link {        
+        display: none; 
 
         @media(min-width: 1024px) {
             display: flex;
