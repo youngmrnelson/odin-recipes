@@ -8,8 +8,8 @@ const navIcons = document.querySelectorAll('i');
 
 // Event Listeners
 navMenuBtn.addEventListener('click', () => {
-    navLinksContainer.classList.add('nav-links-active');
-    navLinksEl.forEach(link => link.classList.add('nav-link-active'));
+    navLinksContainer.classList.toggle('nav-links-active');
+    navLinksEl.forEach(link => link.classList.toggle('nav-link-active'));
 })
 
 navIcons.forEach(icon => {
