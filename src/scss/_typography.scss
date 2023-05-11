@@ -87,6 +87,10 @@ a {
         font-size: 4.2rem;
         font-weight: 600;
         color: var(--gray-4);
+
+        &::before {
+            content: "#";
+        }
     }
 
     &-step-title {
