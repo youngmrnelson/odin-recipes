@@ -158,3 +158,10 @@
 .bottom-line { 
     border-bottom: 4px solid var(--odin-primary);
 }
+
+// Display
+.display {
+    &-inline {
+        display: inline;
+    }
+}

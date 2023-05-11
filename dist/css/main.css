@@ -271,6 +271,10 @@ table {
   border-bottom: 4px solid var(--odin-primary);
 }
 
+.display-inline {
+  display: inline;
+}
+
 .btn {
   cursor: pointer;
   display: inline-block;
@@ -309,7 +313,7 @@ table {
   grid-template-columns: repeat(2, 1fr);
 }
 .recipe-title {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 600;
   border-bottom: 1px solid var(--gray-4);
   grid-column: 1/-1;
@@ -368,15 +372,15 @@ a {
   font-family: "Norse-Bold", cursive;
 }
 .h-main {
-  font-size: 6.4rem;
+  font-size: 6.2rem;
   color: #fff;
 }
 .h-nav {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   color: var(--gray-9);
 }
 .h-header {
-  font-size: 3.2rem;
+  font-size: 3rem;
   color: var(--gray-9);
 }
 
@@ -385,22 +389,22 @@ a {
 }
 .p-subtitle {
   text-transform: uppercase;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: 600;
   color: #fff;
 }
 .p-subheader {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: 300;
   color: var(--gray-6);
 }
 .p-step-number {
-  font-size: 4.4rem;
+  font-size: 4.2rem;
   font-weight: 600;
   color: var(--gray-4);
 }
 .p-step-title {
-  font-size: 3.2rem;
+  font-size: 3rem;
   font-weight: 800;
 }
 .p-footer {
