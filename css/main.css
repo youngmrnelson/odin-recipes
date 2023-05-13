@@ -55,6 +55,7 @@ table {
 
 .flex {
   display: flex;
+  flex-wrap: wrap;
 }
 .flex-fd--c {
   flex-direction: column;
@@ -68,10 +69,16 @@ table {
 .grid {
   display: grid;
 }
+.grid-gc--auto {
+  grid-template-columns: repeat(6, minmax(250px));
+}
 @media (min-width: 767px) {
   .grid-gc--2 {
     grid-template-columns: 1fr 1fr;
   }
+}
+.grid-col-full {
+  grid-column: 1/-1;
 }
 
 .ai-c {
@@ -276,11 +283,15 @@ table {
   display: inline;
 }
 
+.border {
+  border-radius: 0 20px 0 20px;
+  border: 7px solid #fff;
+}
+
 .btn {
   cursor: pointer;
   display: inline-block;
   border: 2px solid transparent;
-  border-radius: 0 10px 0 10px;
   color: var(--gray-9);
   background: transparent;
   font-size: 2rem;
@@ -387,6 +398,10 @@ a {
 
 .p-main {
   font-size: 1.6rem;
+}
+.p-main-alt {
+  font-size: 1.8rem;
+  color: var(--gray-6);
 }
 .p-subtitle {
   text-transform: uppercase;
