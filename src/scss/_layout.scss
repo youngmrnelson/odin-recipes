@@ -1,6 +1,7 @@
 // Flexbox Layouts
 .flex {
     display: flex;
+    flex-wrap: wrap;
 
     // FD-C
     &-fd--c {
@@ -19,11 +20,20 @@
 .grid {
     display: grid; 
 
+    &-gc--auto {
+        grid-template-columns: repeat(6, minmax(250px));
+    }
+
     // GC-2
     @media (min-width: 767px) {
         &-gc--2 {
             grid-template-columns: 1fr 1fr;
         }
+    }
+
+    // Grid-col-full
+    &-col-full {
+        grid-column: 1 / -1;
     }
 }
 

@@ -68,6 +68,11 @@ a {
 .p {
     &-main {
         font-size: 1.6rem;
+
+        &-alt {
+            font-size: 1.8rem;
+            color: var(--gray-6);
+        }
     }
 
     &-subtitle {
