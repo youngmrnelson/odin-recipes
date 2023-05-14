@@ -288,6 +288,10 @@ table {
   border: 7px solid #fff;
 }
 
+.hidden {
+  display: none;
+}
+
 .btn {
   cursor: pointer;
   display: inline-block;
@@ -305,6 +309,9 @@ table {
   background: var(--odin-light);
   color: var(--odin-primary);
   border-color: var(--odin-primary);
+}
+.btn-delete {
+  color: #e03131;
 }
 
 .recipe {
@@ -345,6 +352,17 @@ table {
   color: var(--odin-primary);
   border-bottom: 2px solid var(--odin-primary);
   place-self: start;
+}
+
+#recipe-form {
+  position: absolute;
+  height: 300px;
+  width: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 999em rgba(0, 0, 0, 0.8);
+  z-index: 1;
 }
 
 @font-face {

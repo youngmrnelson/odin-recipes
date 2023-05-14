@@ -64,7 +64,7 @@
       </div>
     </nav>
     <!-- Main Section -->
-    <main class="my-4 p-2">
+    <main class="my-3 p-2">
       <header class="bg-hero ta-c border py-2">
         <h2 class="h h-main">Welcome Back</h2>
         <p class="p-subtitle">John Doe!</p>
@@ -77,13 +77,56 @@
           </div>
         </header>
         <div class="container m-auto grid grid-gc--auto">
-          <button class="btn btn-main p-2 ps-c grid-col-full">
+          <button class="btn btn-main p-2 ps-c grid-col-full add-recipes">
             Add Recipe +
           </button>
           <!-- Recipes of the Day: Content -->
           <div
-            class="container m-auto flex flex-fd--c flex-fd--c-mobile jc-sb ai-c gap-3 my-4 p-2"
+            class="container m-auto flex flex-fd--c flex-fd--c-mobile jc-sb ai-c gap-3 my-4 p-2 p-rel"
           >
+            <form action="#" class="ta-c p-3 bg-light hidden" id="recipe-form">
+              <fieldset class="flex flex-fd--c gap-3">
+                <legend class="mb-3 p-step-title bottom-line">
+                  Describe your recipe
+                </legend>
+                <label for="name" class="p-main"
+                  >Recipe Name:
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="p-0"
+                    placeholder="e.g. Salad..."
+                    required
+                /></label>
+                <label for="calories" class="p-main"
+                  >Total Calories:
+                  <input
+                    type="number"
+                    id="calories"
+                    name="calories"
+                    class="p-0"
+                    placeholder="e.g. 112 Calories..."
+                    required
+                /></label>
+                <label for="ingredients" class="p-main"
+                  >Total Ingredients:
+                  <input
+                    type="number"
+                    id="ingredients"
+                    name="ingredients"
+                    class="p-0"
+                    placeholder="e.g. 13 Ingredients..."
+                    required
+                /></label>
+                <input
+                  type="submit"
+                  value="Add Recipe"
+                  class="btn btn-main"
+                  id="submit"
+                />
+              </fieldset>
+            </form>
             <!-- Recipe Card -->
             <figure class="recipe p-2">
               <img
@@ -99,9 +142,10 @@
                 <p class="recipe-stat py-0">
                   <span class="recipe-stat-alt">12</span> Ingredients
                 </p>
-                <a href="#" target="_blank" class="recipe-link py-0"
-                  >Full Recipe</a
-                >
+                <button class="btn recipe-link py-0">Full Recipe</button>
+                <button class="btn p-main btn-delete py-0">
+                  Delete Recipe
+                </button>
               </article>
             </figure>
           </div>
