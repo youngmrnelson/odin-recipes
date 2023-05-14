@@ -1,3 +1,4 @@
+/* eslint-disable no-use-before-define */
 // DOM Variables
 const recipeFormEl = document.getElementById('recipe-form');
 const recipeNameEl = document.getElementById('name');
@@ -63,7 +64,7 @@ function createRecipeCard() {
     recipesContainerEl.insertAdjacentHTML('afterbegin', html);
 
     const deleteBtns = document.querySelectorAll('.btn-delete');
-    deleteBtns.forEach((deleteBtn, i) => {
+    deleteBtns.forEach((deleteBtn) => {
       deleteBtn.addEventListener('click', () => {
         deleteRecipe(index);
       });
