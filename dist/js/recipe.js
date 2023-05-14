@@ -1,13 +1,17 @@
-// Recipes Object
-function Recipe(recipeName, calories) {
+// DOM Variables
+const recipeFormEl = document.getElementById('recipe-form');
+const addRecipeBtn = document.querySelector('.add-recipes');
+
+// Recipe Array
+const myRecipes = [];
+
+// Recipes Constructor
+function Recipe(recipeName, calories, ingredients) {
   this.recipeName = recipeName;
   this.calories = calories;
-  this.info = function () {
-    // console.log(recipeName);
-  };
+  this.ingredients = ingredients;
 }
 
-const recipe = new Recipe('Salad', 113);
-recipe.info();
-
-// console.log(Object.getPrototypeOf(recipe) === Recipe.prototype);
+function addRecipeToRecipes() {
+  // Do stuff
+}

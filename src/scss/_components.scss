@@ -18,6 +18,10 @@
             border-color: var(--odin-primary);
         }
     }
+
+    &-delete {
+        color: #e03131;
+    }
 }
 
 // Recipe Card
@@ -66,4 +70,16 @@
         border-bottom: 2px solid var(--odin-primary);
         place-self: start;
     }
+}
+
+// Recipe Form
+#recipe-form {
+    position: absolute;
+    height: 300px;
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 0 999em rgba(0, 0, 0, 0.8);
+    z-index: 1;
 }
