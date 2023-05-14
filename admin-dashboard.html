@@ -76,58 +76,57 @@
             <h2 class="h h-header bottom-line display-inline">Your Recipes:</h2>
           </div>
         </header>
-        <div class="container m-auto grid grid-gc--auto">
+        <div class="container m-auto grid grid-gc--auto p-rel">
           <button class="btn btn-main p-2 ps-c grid-col-full add-recipes">
             Add Recipe +
           </button>
-          <!-- Recipes of the Day: Content -->
+          <!-- Recipes: Container -->
           <div
             class="container m-auto flex flex-fd--c flex-fd--c-mobile jc-sb ai-c gap-3 my-4 p-2 p-rel recipes-container"
-          >
-            <form action="#" class="ta-c p-3 bg-light hidden" id="recipe-form">
-              <fieldset class="flex flex-fd--c gap-3">
-                <legend class="mb-3 p-step-title bottom-line">
-                  Describe your recipe
-                </legend>
-                <label for="name" class="p-main"
-                  >Recipe Name:
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    class="p-0"
-                    placeholder="e.g. Salad..."
-                    required
-                /></label>
-                <label for="calories" class="p-main"
-                  >Total Calories:
-                  <input
-                    type="number"
-                    id="calories"
-                    name="calories"
-                    class="p-0"
-                    placeholder="e.g. 112 Calories..."
-                    required
-                /></label>
-                <label for="ingredients" class="p-main"
-                  >Total Ingredients:
-                  <input
-                    type="number"
-                    id="ingredients"
-                    name="ingredients"
-                    class="p-0"
-                    placeholder="e.g. 13 Ingredients..."
-                    required
-                /></label>
+          ></div>
+          <form action="#" class="ta-c p-3 bg-light hidden" id="recipe-form">
+            <fieldset class="flex flex-fd--c gap-3">
+              <legend class="mb-3 p-step-title bottom-line">
+                Describe your recipe
+              </legend>
+              <label for="name" class="p-main"
+                >Recipe Name:
                 <input
-                  type="button"
-                  value="Add Recipe"
-                  class="btn btn-main"
-                  id="submit"
-                />
-              </fieldset>
-            </form>
-          </div>
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="p-0"
+                  placeholder="e.g. Salad..."
+                  required
+              /></label>
+              <label for="calories" class="p-main"
+                >Total Calories:
+                <input
+                  type="number"
+                  id="calories"
+                  name="calories"
+                  class="p-0"
+                  placeholder="e.g. 112 Calories..."
+                  required
+              /></label>
+              <label for="ingredients" class="p-main"
+                >Total Ingredients:
+                <input
+                  type="number"
+                  id="ingredients"
+                  name="ingredients"
+                  class="p-0"
+                  placeholder="e.g. 13 Ingredients..."
+                  required
+              /></label>
+              <input
+                type="button"
+                value="Add Recipe"
+                class="btn btn-main"
+                id="submit"
+              />
+            </fieldset>
+          </form>
         </div>
       </section>
     </main>
