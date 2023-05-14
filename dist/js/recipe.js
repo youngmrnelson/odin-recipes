@@ -33,7 +33,10 @@ const createRecipe = () => {
 };
 
 function createRecipeCard() {
-  myRecipes.forEach((recipe) => {
+  while (recipesContainerEl.firstChild) {
+    recipesContainerEl.removeChild(recipesContainerEl.firstChild);
+  }
+  myRecipes.forEach((recipe, index) => {
     const html = `
       <!-- Recipe Card -->
             <figure class="recipe p-2">
@@ -58,7 +61,19 @@ function createRecipeCard() {
             </figure>
     `;
     recipesContainerEl.insertAdjacentHTML('afterbegin', html);
+
+    const deleteBtns = document.querySelectorAll('.btn-delete');
+    deleteBtns.forEach((deleteBtn, i) => {
+      deleteBtn.addEventListener('click', () => {
+        deleteRecipe(index);
+      });
+    });
   });
+}
+
+function deleteRecipe(index) {
+  myRecipes.splice(index, 1);
+  createRecipeCard();
 }
 
 function submitRecipe() {
