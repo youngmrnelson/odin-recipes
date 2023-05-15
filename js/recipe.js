@@ -12,10 +12,12 @@ const submitRecipeBtn = document.getElementById('submit');
 const myRecipes = [];
 
 // Recipes Constructor
-function Recipe(recipeName, calories, ingredients) {
-  this.recipeName = recipeName;
-  this.calories = calories;
-  this.ingredients = ingredients;
+class Recipe {
+  constructor(recipeName, calories, ingredients) {
+    this.recipeName = recipeName;
+    this.calories = calories;
+    this.ingredients = ingredients;
+  }
 }
 
 const toggleRecipesForm = () => {
