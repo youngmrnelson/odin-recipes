@@ -1,3 +1,31 @@
+// Styles
+import './scss/main.scss';
+
+// DOM Variables
+const navMenuBtn = document.querySelector('.nav-btn');
+const navLinksContainer = document.querySelector('.nav-links');
+const navLinksEl = document.querySelectorAll('.nav-link');
+const navIcons = document.querySelectorAll('i');
+
+// Event Listeners
+navMenuBtn.addEventListener('click', () => {
+  navLinksContainer.classList.toggle('nav-links-active');
+  navLinksEl.forEach((link) => link.classList.toggle('nav-link-active'));
+});
+
+navIcons.forEach((icon) => {
+  // Add fade effect to icon icons
+  if (!icon.parentElement.classList.contains('nav-link')) {
+    icon.parentElement.addEventListener('mouseover', () => {
+      icon.classList.add('fa-fade');
+    });
+  }
+  // Remove fade effect on icon
+  icon.parentElement.addEventListener('mouseout', () => {
+    icon.classList.remove('fa-fade');
+  });
+});
+
 /* eslint-disable no-use-before-define */
 // DOM Variables
 const recipeFormEl = document.getElementById('recipe-form');

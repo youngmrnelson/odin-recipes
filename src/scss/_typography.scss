@@ -2,10 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
 @font-face {
     font-family:"Norse-Bold";
-    src:url("../assets/fonts/Norse-Bold.eot?") format("eot"),
+    src:url("../assets/fonts/Norse-Bold.eot") format("eot"),
         url("../assets/fonts/Norse-Bold.woff") format("woff"),
-        url("../assets/fonts/Norse-Bold.ttf") format("truetype"),
-        url("../assets/fonts/Norse-Bold.svg#Norse-Bold") format("svg");
+        url("../assets/fonts/Norse-Bold.ttf") format("truetype");
     font-weight:normal;
     font-style:normal;
 }
@@ -46,7 +45,7 @@ a {
 
 // Headings
 .h {
-    font-family: 'Norse-Bold', cursive;
+    font-family: "Norse-Bold", cursive;
 
     &-main {
         font-size: 6.2rem;
