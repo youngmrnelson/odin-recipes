@@ -2,6 +2,63 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/navigation.js":
+/*!******************************!*\
+  !*** ./src/js/navigation.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+/* eslint-disable node/no-unsupported-features/es-syntax */
+// DOM Variables
+var navIcons = document.querySelectorAll('i');
+navIcons.forEach(function (icon) {
+  // Add fade effect to icon icons
+  if (!icon.parentElement.classList.contains('nav-link')) {
+    icon.parentElement.addEventListener('mouseover', function () {
+      icon.classList.add('fa-fade');
+    });
+  }
+  // Remove fade effect on icon
+  icon.parentElement.addEventListener('mouseout', function () {
+    icon.classList.remove('fa-fade');
+  });
+});
+var NavigationUI = /*#__PURE__*/function () {
+  function NavigationUI() {
+    _classCallCheck(this, NavigationUI);
+    // DOM Variables
+    this.button = document.querySelector('.nav-btn');
+    this.linksContainer = document.querySelector('.nav-links');
+    this.links = document.querySelectorAll('.nav-link');
+    this.icons = document.querySelectorAll('i');
+    // Event Listeners
+    this.button.addEventListener('click', this.toggleMenu.bind(this));
+  }
+  _createClass(NavigationUI, [{
+    key: "toggleMenu",
+    value: function toggleMenu() {
+      this.linksContainer.classList.toggle('nav-links-active');
+      this.links.forEach(function (link) {
+        return link.classList.toggle('nav-link-active');
+      });
+    }
+  }]);
+  return NavigationUI;
+}();
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (new NavigationUI());
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss":
 /*!*********************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
@@ -700,107 +757,14 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scss/main.scss */ "./src/scss/main.scss");
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
-function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+/* harmony import */ var _js_navigation_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/navigation.js */ "./src/js/navigation.js");
+/* eslint-disable import/extensions */
+/* eslint-disable node/no-unsupported-features/es-syntax */
 // Styles
 
 
-// DOM Variables
-var navMenuBtn = document.querySelector('.nav-btn');
-var navLinksContainer = document.querySelector('.nav-links');
-var navLinksEl = document.querySelectorAll('.nav-link');
-var navIcons = document.querySelectorAll('i');
-
-// Event Listeners
-navMenuBtn.addEventListener('click', function () {
-  navLinksContainer.classList.toggle('nav-links-active');
-  navLinksEl.forEach(function (link) {
-    return link.classList.toggle('nav-link-active');
-  });
-});
-navIcons.forEach(function (icon) {
-  // Add fade effect to icon icons
-  if (!icon.parentElement.classList.contains('nav-link')) {
-    icon.parentElement.addEventListener('mouseover', function () {
-      icon.classList.add('fa-fade');
-    });
-  }
-  // Remove fade effect on icon
-  icon.parentElement.addEventListener('mouseout', function () {
-    icon.classList.remove('fa-fade');
-  });
-});
-
-/* eslint-disable no-use-before-define */
-// DOM Variables
-var recipeFormEl = document.getElementById('recipe-form');
-var recipeNameEl = document.getElementById('name');
-var recipeCaloriesEl = document.getElementById('calories');
-var recipeIngredientsEl = document.getElementById('ingredients');
-var recipesContainerEl = document.querySelector('.recipes-container');
-var addRecipeBtn = document.querySelector('.add-recipes');
-var submitRecipeBtn = document.getElementById('submit');
-
-// Recipe Array
-var myRecipes = [];
-
-// Recipes Constructor
-var Recipe = /*#__PURE__*/_createClass(function Recipe(recipeName, calories, ingredients) {
-  _classCallCheck(this, Recipe);
-  this.recipeName = recipeName;
-  this.calories = calories;
-  this.ingredients = ingredients;
-});
-var toggleRecipesForm = function toggleRecipesForm() {
-  recipeFormEl.classList.toggle('hidden');
-  recipeNameEl.value = '';
-  recipeCaloriesEl.value = '';
-  recipeIngredientsEl.value = '';
-};
-var createRecipe = function createRecipe() {
-  var recipeName = recipeNameEl.value;
-  var calories = recipeCaloriesEl.value;
-  var ingredients = recipeIngredientsEl.value;
-  var newRecipe = new Recipe(recipeName, calories, ingredients);
-  myRecipes.push(newRecipe);
-};
-function createRecipeCard() {
-  while (recipesContainerEl.firstChild) {
-    recipesContainerEl.removeChild(recipesContainerEl.firstChild);
-  }
-  myRecipes.forEach(function (recipe, index) {
-    var html = "\n      <!-- Recipe Card -->\n            <figure class=\"recipe p-2\">\n              <img\n                src=\"images/recipes/recipe-of-day-1.jpg\"\n                alt=\"\"\n                class=\"img recipe-img\"\n              />\n              <article class=\"recipe-title-container\">\n                <p class=\"recipe-title py-0\">".concat(recipe.recipeName, "</p>\n                <p class=\"recipe-stat py-0\">\n                  <span class=\"recipe-stat-alt\">").concat(recipe.calories, "</span> Calories\n                </p>\n                <p class=\"recipe-stat py-0\">\n                  <span class=\"recipe-stat-alt\">").concat(recipe.ingredients, "</span> Ingredients\n                </p>\n                <button class=\"btn recipe-link py-0\">Full Recipe</button>\n                <button class=\"btn p-main btn-delete py-0\">\n                  Delete Recipe\n                </button>\n              </article>\n            </figure>\n    ");
-    recipesContainerEl.insertAdjacentHTML('afterbegin', html);
-    var deleteBtns = document.querySelectorAll('.btn-delete');
-    deleteBtns.forEach(function (deleteBtn) {
-      deleteBtn.addEventListener('click', function () {
-        deleteRecipe(index);
-      });
-    });
-  });
-}
-function deleteRecipe(index) {
-  myRecipes.splice(index, 1);
-  createRecipeCard();
-}
-function submitRecipe() {
-  createRecipe();
-  createRecipeCard();
-  toggleRecipesForm();
-}
-
-// Event Listeners
-addRecipeBtn.addEventListener('click', toggleRecipesForm);
-submitRecipeBtn.addEventListener('click', function (e) {
-  e.preventDefault();
-  submitRecipe();
-});
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle13a1ab68858cd8b47bd9.js.map
+//# sourceMappingURL=bundlef09b04ce7f4336922f49.js.map
