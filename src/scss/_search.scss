@@ -1,0 +1,20 @@
+@media(min-width: 767px) {
+    .grid-search {
+        grid-template-columns: 6fr 2fr;
+    }
+
+    .grid-search-results,
+    .grid-search-description {
+        grid-column: 1 / -1;
+    }
+
+    @media(min-width: 1024px) {
+        .grid-search-results {
+            grid-column: 2;
+        }
+
+        .grid-search-description {
+            grid-column: 1;
+        }
+    }
+}
