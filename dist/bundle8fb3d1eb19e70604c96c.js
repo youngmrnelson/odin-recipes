@@ -2,10 +2,10 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/js/navigation.js":
-/*!******************************!*\
-  !*** ./src/js/navigation.js ***!
-  \******************************/
+/***/ "./src/js/app.js":
+/*!***********************!*\
+  !*** ./src/js/app.js ***!
+  \***********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -13,49 +13,46 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _classPrivateMethodInitSpec(obj, privateSet) { _checkPrivateRedeclaration(obj, privateSet); privateSet.add(obj); }
+function _checkPrivateRedeclaration(obj, privateCollection) { if (privateCollection.has(obj)) { throw new TypeError("Cannot initialize the same private elements twice on an object"); } }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-/* eslint-disable node/no-unsupported-features/es-syntax */
-// DOM Variables
-var navIcons = document.querySelectorAll('i');
-navIcons.forEach(function (icon) {
-  // Add fade effect to icon icons
-  if (!icon.parentElement.classList.contains('nav-link')) {
-    icon.parentElement.addEventListener('mouseover', function () {
-      icon.classList.add('fa-fade');
-    });
-  }
-  // Remove fade effect on icon
-  icon.parentElement.addEventListener('mouseout', function () {
-    icon.classList.remove('fa-fade');
-  });
-});
-var NavigationUI = /*#__PURE__*/function () {
-  function NavigationUI() {
-    _classCallCheck(this, NavigationUI);
-    // DOM Variables
-    this.button = document.querySelector('.nav-btn');
-    this.linksContainer = document.querySelector('.nav-links');
-    this.links = document.querySelectorAll('.nav-link');
-    this.icons = document.querySelectorAll('i');
-    // Event Listeners
-    this.button.addEventListener('click', this.toggleMenu.bind(this));
-  }
-  _createClass(NavigationUI, [{
-    key: "toggleMenu",
-    value: function toggleMenu() {
-      this.linksContainer.classList.toggle('nav-links-active');
-      this.links.forEach(function (link) {
-        return link.classList.toggle('nav-link-active');
+function _classPrivateMethodGet(receiver, privateSet, fn) { if (!privateSet.has(receiver)) { throw new TypeError("attempted to get private field on non-instance"); } return fn; }
+var _toggleMenu = /*#__PURE__*/new WeakSet();
+var App = /*#__PURE__*/_createClass(function App() {
+  _classCallCheck(this, App);
+  _classPrivateMethodInitSpec(this, _toggleMenu);
+  // DOM Variables
+  _defineProperty(this, "button", document.querySelector('.nav-btn'));
+  _defineProperty(this, "linksContainer", document.querySelector('.nav-links'));
+  _defineProperty(this, "links", document.querySelectorAll('.nav-link'));
+  _defineProperty(this, "icons", document.querySelectorAll('i'));
+  // Event Listeners
+  this.button.addEventListener('click', _classPrivateMethodGet(this, _toggleMenu, _toggleMenu2).bind(this));
+  this.icons.forEach(function (icon) {
+    // Add fade effect to hovered icon
+    if (!icon.parentElement.classList.contains('nav-link')) {
+      icon.parentElement.addEventListener('mouseover', function () {
+        icon.classList.add('fa-fade');
       });
     }
-  }]);
-  return NavigationUI;
-}();
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (new NavigationUI());
+    // Remove fade effect from icon
+    icon.parentElement.addEventListener('mouseout', function () {
+      icon.classList.remove('fa-fade');
+    });
+  });
+});
+function _toggleMenu2() {
+  this.linksContainer.classList.toggle('nav-links-active');
+  this.links.forEach(function (link) {
+    return link.classList.toggle('nav-link-active');
+  });
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (new App());
 
 /***/ }),
 
@@ -757,9 +754,8 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scss/main.scss */ "./src/scss/main.scss");
-/* harmony import */ var _js_navigation_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/navigation.js */ "./src/js/navigation.js");
+/* harmony import */ var _js_app_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/app.js */ "./src/js/app.js");
 /* eslint-disable import/extensions */
-/* eslint-disable node/no-unsupported-features/es-syntax */
 // Styles
 
 
@@ -767,4 +763,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=bundlef09b04ce7f4336922f49.js.map
+//# sourceMappingURL=bundle8fb3d1eb19e70604c96c.js.map
