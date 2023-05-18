@@ -22,10 +22,20 @@
     &-delete {
         color: #e03131;
     }
+
+    &-add-recipe {
+        position: absolute;
+        top: -15px;
+        right: -15px;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+    }
 }
 
 // Recipe Card
 .recipe {
+    position: relative;
     background: var(--gray-1);
     border: 1px solid var(--gray-4);
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -33,7 +43,6 @@
 
     &:hover {
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-        transform: translateY(-2px);
     }
 
     &-img {
