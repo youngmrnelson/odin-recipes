@@ -80,6 +80,17 @@
     }
 }
 
+// Image Sizes
+.img {
+    &-shrink {
+        transform: scale(0.1);
+    }
+
+    &-grow {
+        transform: scale(1);
+    }
+}
+
 // Gap
 .gap {
     &-1 { gap: 8px }

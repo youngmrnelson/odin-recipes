@@ -1,4 +1,18 @@
 class App {
+  // Observer
+  observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove('img-shrink');
+          entry.target.classList.add('img-grow');
+          this.observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.75 }
+  );
+
   // DOM Variables
   button = document.querySelector('.nav-btn');
 
@@ -8,7 +22,10 @@ class App {
 
   icons = document.querySelectorAll('i');
 
+  stepImages = document.querySelectorAll('.img-step');
+
   constructor() {
+    this.stepImages.forEach((img) => this.observer.observe(img));
     // Event Listeners
     this.button.addEventListener('click', this.#toggleMenu.bind(this));
     this.icons.forEach((icon) => {
@@ -21,6 +38,7 @@ class App {
     });
   }
 
+  // Navigation Menu Functions
   #toggleMenu() {
     this.linksContainer.classList.toggle('nav-links-active');
     this.links.forEach((link) => link.classList.toggle('nav-link-active'));
