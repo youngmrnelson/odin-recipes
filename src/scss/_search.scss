@@ -1,20 +1,27 @@
-@media(min-width: 767px) {
-    .grid-search {
-        grid-template-columns: 6fr 2fr;
-    }
+.recipe-search {
+    .recipe-search-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
 
-    .grid-search-results,
-    .grid-search-description {
-        grid-column: 1 / -1;
-    }
-
-    @media(min-width: 1024px) {
-        .grid-search-results {
-            grid-column: 2;
+        @media(min-width: 767px) {
+            flex-direction: row;
+            align-items: center;
         }
+    }
 
-        .grid-search-description {
-            grid-column: 1;
+    .recipe-search-input {
+        border: none;
+        background: #eee;
+    }
+
+    .recipe-ingredients {
+        display: grid;
+        gap: 24px;
+        
+        @media(min-width:  767px) {
+            grid-template-columns: 1fr 1fr;
         }
     }
 }

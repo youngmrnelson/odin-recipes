@@ -22,7 +22,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="css/main.css" />
-  <script defer src="bundle4b77a1ed12bdd08dabd2.js"></script></head>
+  <script defer src="bundleb87c0e55ff86d3d65407.js"></script></head>
   <body>
     <!-- Navigation -->
     <nav class="nav py-0 pi-2">
@@ -279,7 +279,7 @@
             </button>
           </figure>
           <!-- Recipe Card -->
-          <figure class="recipe p-2">
+          <figure class="recipe p-2 m-auto-mobile">
             <img
               src="recipe-of-day-1.jpg"
               alt=""
@@ -307,107 +307,98 @@
         </div>
       </section>
       <!-- Recipe Search Section -->
-      <section id="recipe-search" class="bg-light py-2">
+      <section id="recipe-search" class="py-2">
         <!-- Recipe Search Header -->
         <header class="ta-c">
           <div class="container m-auto mb-3">
             <p class="p p-subheader">Let's get cooking...</p>
             <h2 class="h h-header bottom-line display-inline">Recipe Search</h2>
           </div>
-          <div class="container m-auto grid grid-search p-1">
+        </header>
+        <!-- Recipe Search Form -->
+        <div class="container m-auto recipe-search p-2">
+          <header class="recipe-search-header mb-3">
+            <label
+              for="recipe"
+              class="recipe-search-label ta-c h p-main-alt p-1"
+              >Search For Recipes:</label
+            >
             <input
-              type="text"
-              id="search-input"
-              class="p-1"
-              placeholder="Search for recipes..."
+              type="search"
+              name="recipe"
+              id="recipe-search"
+              class="recipe-search-input p-main ml-1 p-1"
+              placeholder="Enter the name of a dish..."
             />
-            <div class="search-btns">
-              <button id="search-button" class="btn btn-main p-1 ps-c">
-                Search
-                <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-              </button>
-              <button id="search-button" class="btn btn-main p-1 ps-c">
-                Library
-                <i class="fa-solid fa-bookmark" aria-hidden="true"></i>
-              </button>
-            </div>
-            <!-- Recipe Description -->
-            <div class="grid-search-description">
-              <img
-                src="recipe-of-day-1.jpg"
-                alt=""
-                class="img recipe-img"
-              />
-              <article class="recipe-title-container">
-                <p class="recipe-title py-0">Recipe</p>
-                <p class="recipe-stat py-0">
-                  <span class="recipe-stat-alt">113</span> Calories
-                </p>
-                <p class="recipe-stat py-0">
-                  <span class="recipe-stat-alt">12</span> Ingredients
-                </p>
-              </article>
-              <ul class="recipe-ingredients grid grid-gc--2">
-                <li class="recipe-step">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Accusamus, maxime?
+            <button type="submit" class="btn btn-main p-1">Search</button>
+            <button class="btn btn-main p-1">Library</button>
+            <button class="btn btn-main p-1">Add Recipe</button>
+          </header>
+          <div class="recipe-search-details">
+            <img
+              src="recipe-of-day-1.jpg"
+              alt=""
+              class="img recipe-search-img m-auto"
+            />
+            <article class="recipe-title-container">
+              <p class="recipe-title py-0 h h-header ta-c">Recipe</p>
+              <p class="recipe-stat py-0 p-main">
+                <span class="recipe-stat-alt">113</span> Calories
+              </p>
+              <p class="recipe-stat py-0 p-main">
+                <span class="recipe-stat-alt">12</span> Ingredients
+              </p>
+              <ol class="recipe-ingredients grid-col-full my-3">
+                <li class="p-main">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Nihil, nobis.
                 </li>
-                <li class="recipe-step">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Accusamus, maxime?
+                <li class="p-main">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Nihil, nobis.
                 </li>
-                <li class="recipe-step">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Accusamus, maxime?
+                <li class="p-main">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Nihil, nobis.
                 </li>
-                <li class="recipe-step">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Accusamus, maxime?
+                <li class="p-main">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Nihil, nobis.
                 </li>
-                <li class="recipe-step">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Accusamus, maxime?
+                <li class="p-main">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Nihil, nobis.
                 </li>
-                <li class="recipe-step">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Accusamus, maxime?
+                <li class="p-main">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Nihil, nobis.
                 </li>
-                <li class="recipe-step">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Accusamus, maxime?
+                <li class="p-main">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Nihil, nobis.
                 </li>
-                <li class="recipe-step">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Accusamus, maxime?
+                <li class="p-main">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Nihil, nobis.
                 </li>
-                <li class="recipe-step">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Accusamus, maxime?
+                <li class="p-main">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Nihil, nobis.
                 </li>
-                <li class="recipe-step">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Accusamus, maxime?
-                </li>
-              </ul>
+              </ol>
               <a href="#" target="_blank" class="recipe-link py-0"
                 >Full Recipe</a
               >
-              <button class="btn btn-view btn-main p-1">Add Recipe</button>
-            </div>
-            <!-- Recipe -->
-            <div class="grid-search-results flex jc-c">
-              <figure class="recipe p-2">
-                <img
-                  src="recipe-of-day-1.jpg"
-                  alt=""
-                  class="img recipe-img-search"
-                />
-                <figcaption class="recipe-title py-0">Recipe</figcaption>
-                <button class="btn btn-view btn-main p-1">View Recipe</button>
-              </figure>
-            </div>
+              <button
+                class="btn btn-main p-1"
+                aria-label="Add recipe to library"
+              >
+                Add To Library +
+              </button>
+            </article>
           </div>
-        </header>
+          <div class="recipe-search-library"></div>
+        </div>
       </section>
     </main>
     <!-- Footer -->

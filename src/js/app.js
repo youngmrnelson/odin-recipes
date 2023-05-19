@@ -28,9 +28,6 @@ class App {
     this.stepImages.forEach((img) => this.observer.observe(img));
     // Event Listeners
     this.button.addEventListener('click', this.#toggleMenu.bind(this));
-    this.links.forEach((link) =>
-      link.addEventListener('click', this.#toggleMenu.bind(this))
-    );
     this.icons.forEach((icon) => {
       // Add fade effect to hovered icon
       if (!icon.parentElement.classList.contains('nav-link')) {

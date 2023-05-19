@@ -150,7 +150,15 @@
 }
 
 .m {
-    &-auto { margin-inline: auto }
+    &-auto-mobile,
+    &-auto { 
+        margin-inline: auto 
+    }
+    @media(min-width: 1024px) {
+        &-auto-mobile {
+            margin-inline: 0;
+        }
+    }
 }
 
 // Text Align
