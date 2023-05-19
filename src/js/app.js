@@ -1,3 +1,5 @@
+import Recipe from './recipes';
+
 class App {
   // Observer
   observer = new IntersectionObserver(
@@ -25,13 +27,15 @@ class App {
   stepImages = document.querySelectorAll('.img-step');
 
   // DOM Variables - Recipe Library
-  openLibraryBtn = document.querySelector('btn-library');
+  openLibraryBtn = document.querySelector('.btn-library');
 
   createRecipeBtn = document.querySelector('.btn-create-recipe');
 
   recipeDetailsEl = document.querySelector('.recipe-search-details');
 
   recipeLibraryEl = document.querySelector('.recipe-search-library');
+
+  recipesContainerEl = document.querySelector('.recipes-container');
 
   recipeSearchFormEl = document.getElementById('recipe-form');
 
@@ -44,7 +48,7 @@ class App {
   submitRecipesBtn = document.getElementById('submit');
 
   // Global Variables
-  myRecipes = [];
+  #myRecipes = [];
 
   constructor() {
     this.stepImages.forEach((img) => this.observer.observe(img));
@@ -63,6 +67,11 @@ class App {
       'click',
       this.#toggleRecipeForm.bind(this)
     );
+    this.submitRecipesBtn.addEventListener(
+      'click',
+      this.#submitRecipe.bind(this)
+    );
+    this.openLibraryBtn.addEventListener('click', this.#openLibrary.bind(this));
   }
 
   // Navigation Menu Functions
@@ -87,7 +96,69 @@ class App {
     this.recipeIngredientsEl.value = '';
   }
 
-  #createRecipe() {}
+  #createRecipe() {
+    const recipeName = this.recipeNameEl.value;
+    const calories = this.recipeCaloriesEl.value;
+    const ingredients = this.recipeIngredientsEl.value;
+    const newRecipe = new Recipe(recipeName, calories, ingredients);
+    this.#myRecipes.push(newRecipe);
+  }
+
+  #createRecipeCard() {
+    while (this.recipesContainerEl.firstChild) {
+      this.recipesContainerEl.removeChild(this.recipesContainerEl.firstChild);
+    }
+    this.#myRecipes.forEach((recipe, index) => {
+      const html = `
+      <!-- Recipe Card -->
+            <figure class="recipe p-2">
+              <img
+                src="images/recipes/recipe-of-day-1.jpg"
+                alt=""
+                class="img recipe-img"
+              />
+              <article class="recipe-title-container">
+                <p class="recipe-title py-0">${recipe.recipeName}</p>
+                <p class="recipe-stat py-0">
+                  <span class="recipe-stat-alt">${recipe.calories}</span> Calories
+                </p>
+                <p class="recipe-stat py-0">
+                  <span class="recipe-stat-alt">${recipe.ingredients}</span> Ingredients
+                </p>
+                <button class="btn recipe-link py-0">Full Recipe</button>
+                <button class="btn p-main btn-delete py-0">
+                  Delete Recipe
+                </button>
+              </article>
+            </figure>
+      `;
+      this.recipesContainerEl.insertAdjacentHTML('afterbegin', html);
+
+      const deleteBtns = document.querySelectorAll('.btn-delete');
+      deleteBtns.forEach((deleteBtn) => {
+        deleteBtn.addEventListener('click', () => {
+          this.#deleteRecipe(index);
+        });
+      });
+    });
+  }
+
+  #deleteRecipe(index) {
+    this.#myRecipes.splice(index, 1);
+    this.#createRecipeCard();
+  }
+
+  #submitRecipe(e) {
+    e.preventDefault();
+    this.#createRecipe();
+    this.#createRecipeCard();
+    this.#toggleRecipeForm();
+  }
+
+  #openLibrary() {
+    this.recipeDetailsEl.classList.toggle('hidden');
+    this.recipeLibraryEl.classList.toggle('hidden');
+  }
 }
 
 export default new App();

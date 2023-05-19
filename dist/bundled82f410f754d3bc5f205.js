@@ -12,22 +12,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _recipes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./recipes */ "./src/js/recipes.js");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _classPrivateMethodInitSpec(obj, privateSet) { _checkPrivateRedeclaration(obj, privateSet); privateSet.add(obj); }
+function _classPrivateFieldInitSpec(obj, privateMap, value) { _checkPrivateRedeclaration(obj, privateMap); privateMap.set(obj, value); }
 function _checkPrivateRedeclaration(obj, privateCollection) { if (privateCollection.has(obj)) { throw new TypeError("Cannot initialize the same private elements twice on an object"); } }
 function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _classPrivateFieldGet(receiver, privateMap) { var descriptor = _classExtractFieldDescriptor(receiver, privateMap, "get"); return _classApplyDescriptorGet(receiver, descriptor); }
+function _classExtractFieldDescriptor(receiver, privateMap, action) { if (!privateMap.has(receiver)) { throw new TypeError("attempted to " + action + " private field on non-instance"); } return privateMap.get(receiver); }
+function _classApplyDescriptorGet(receiver, descriptor) { if (descriptor.get) { return descriptor.get.call(receiver); } return descriptor.value; }
 function _classPrivateMethodGet(receiver, privateSet, fn) { if (!privateSet.has(receiver)) { throw new TypeError("attempted to get private field on non-instance"); } return fn; }
+
+var _myRecipes = /*#__PURE__*/new WeakMap();
 var _toggleMenu = /*#__PURE__*/new WeakSet();
 var _addFadeEffect = /*#__PURE__*/new WeakSet();
 var _removeFadeEffect = /*#__PURE__*/new WeakSet();
+var _toggleRecipeForm = /*#__PURE__*/new WeakSet();
+var _createRecipe = /*#__PURE__*/new WeakSet();
+var _createRecipeCard = /*#__PURE__*/new WeakSet();
+var _deleteRecipe = /*#__PURE__*/new WeakSet();
+var _submitRecipe = /*#__PURE__*/new WeakSet();
 var App = /*#__PURE__*/_createClass(function App() {
   var _this = this;
   _classCallCheck(this, App);
+  _classPrivateMethodInitSpec(this, _submitRecipe);
+  _classPrivateMethodInitSpec(this, _deleteRecipe);
+  _classPrivateMethodInitSpec(this, _createRecipeCard);
+  _classPrivateMethodInitSpec(this, _createRecipe);
+  // Recipe Form Functions
+  _classPrivateMethodInitSpec(this, _toggleRecipeForm);
   _classPrivateMethodInitSpec(this, _removeFadeEffect);
   _classPrivateMethodInitSpec(this, _addFadeEffect);
   // Navigation Menu Functions
@@ -44,18 +62,31 @@ var App = /*#__PURE__*/_createClass(function App() {
   }, {
     threshold: 0.75
   }));
-  // DOM Variables
+  // DOM Variables - Navigation
   _defineProperty(this, "linkBtn", document.querySelector('.nav-btn'));
   _defineProperty(this, "linksContainer", document.querySelector('.nav-links'));
   _defineProperty(this, "links", document.querySelectorAll('.nav-link'));
   _defineProperty(this, "icons", document.querySelectorAll('i'));
   _defineProperty(this, "stepImages", document.querySelectorAll('.img-step'));
+  // DOM Variables - Recipe Library
   _defineProperty(this, "openLibraryBtn", document.querySelector('btn-library'));
   _defineProperty(this, "createRecipeBtn", document.querySelector('.btn-create-recipe'));
+  _defineProperty(this, "recipeDetailsEl", document.querySelector('.recipe-search-details'));
+  _defineProperty(this, "recipeLibraryEl", document.querySelector('.recipes-container'));
+  _defineProperty(this, "recipeSearchFormEl", document.getElementById('recipe-form'));
+  _defineProperty(this, "recipeNameEl", document.getElementById('name'));
+  _defineProperty(this, "recipeCaloriesEl", document.getElementById('calories'));
+  _defineProperty(this, "recipeIngredientsEl", document.getElementById('ingredients'));
+  _defineProperty(this, "submitRecipesBtn", document.getElementById('submit'));
+  // Global Variables
+  _classPrivateFieldInitSpec(this, _myRecipes, {
+    writable: true,
+    value: []
+  });
   this.stepImages.forEach(function (img) {
     return _this.observer.observe(img);
   });
-  // Event Listeners
+  // Event Listeners - Navigation / Icons
   this.linkBtn.addEventListener('click', _classPrivateMethodGet(this, _toggleMenu, _toggleMenu2).bind(this));
   this.icons.forEach(function (icon) {
     // Add fade effect to hovered icon
@@ -65,6 +96,9 @@ var App = /*#__PURE__*/_createClass(function App() {
     // Remove fade effect from icon
     icon.parentElement.addEventListener('mouseout', _classPrivateMethodGet(_this, _removeFadeEffect, _removeFadeEffect2));
   });
+  // Event Listeners - Recipe Library
+  this.createRecipeBtn.addEventListener('click', _classPrivateMethodGet(this, _toggleRecipeForm, _toggleRecipeForm2).bind(this));
+  this.submitRecipesBtn.addEventListener('click', _classPrivateMethodGet(this, _submitRecipe, _submitRecipe2).bind(this));
 });
 function _toggleMenu2() {
   this.linksContainer.classList.toggle('nav-links-active');
@@ -78,7 +112,73 @@ function _addFadeEffect2() {
 function _removeFadeEffect2() {
   this.classList.remove('fa-fade');
 }
+function _toggleRecipeForm2() {
+  this.recipeSearchFormEl.classList.toggle('hidden');
+  this.recipeNameEl.value = '';
+  this.recipeCaloriesEl.value = '';
+  this.recipeIngredientsEl.value = '';
+}
+function _createRecipe2() {
+  var recipeName = this.recipeNameEl.value;
+  var calories = this.recipeCaloriesEl.value;
+  var ingredients = this.recipeIngredientsEl.value;
+  var newRecipe = new _recipes__WEBPACK_IMPORTED_MODULE_0__["default"](recipeName, calories, ingredients);
+  _classPrivateFieldGet(this, _myRecipes).push(newRecipe);
+}
+function _createRecipeCard2() {
+  var _this2 = this;
+  while (this.recipeLibraryEl.firstChild) {
+    this.recipeLibraryEl.removeChild(this.recipeLibraryEl.firstChild);
+  }
+  _classPrivateFieldGet(this, _myRecipes).forEach(function (recipe, index) {
+    var html = "\n      <!-- Recipe Card -->\n            <figure class=\"recipe p-2\">\n              <img\n                src=\"images/recipes/recipe-of-day-1.jpg\"\n                alt=\"\"\n                class=\"img recipe-img\"\n              />\n              <article class=\"recipe-title-container\">\n                <p class=\"recipe-title py-0\">".concat(recipe.recipeName, "</p>\n                <p class=\"recipe-stat py-0\">\n                  <span class=\"recipe-stat-alt\">").concat(recipe.calories, "</span> Calories\n                </p>\n                <p class=\"recipe-stat py-0\">\n                  <span class=\"recipe-stat-alt\">").concat(recipe.ingredients, "</span> Ingredients\n                </p>\n                <button class=\"btn recipe-link py-0\">Full Recipe</button>\n                <button class=\"btn p-main btn-delete py-0\">\n                  Delete Recipe\n                </button>\n              </article>\n            </figure>\n      ");
+    _this2.recipeLibraryEl.insertAdjacentHTML('afterbegin', html);
+    var deleteBtns = document.querySelectorAll('.btn-delete');
+    deleteBtns.forEach(function (deleteBtn) {
+      deleteBtn.addEventListener('click', function () {
+        _classPrivateMethodGet(_this2, _deleteRecipe, _deleteRecipe2).call(_this2, index);
+      });
+    });
+  });
+}
+function _deleteRecipe2(index) {
+  _classPrivateFieldGet(this, _myRecipes).splice(index, 1);
+  _classPrivateMethodGet(this, _createRecipeCard, _createRecipeCard2).call(this);
+}
+function _submitRecipe2(e) {
+  e.preventDefault();
+  _classPrivateMethodGet(this, _createRecipe, _createRecipe2).call(this);
+  _classPrivateMethodGet(this, _createRecipeCard, _createRecipeCard2).call(this);
+  _classPrivateMethodGet(this, _toggleRecipeForm, _toggleRecipeForm2).call(this);
+}
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (new App());
+
+/***/ }),
+
+/***/ "./src/js/recipes.js":
+/*!***************************!*\
+  !*** ./src/js/recipes.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Recipe)
+/* harmony export */ });
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+// Recipes Constructor
+var Recipe = /*#__PURE__*/_createClass(function Recipe(recipeName, calories, ingredients) {
+  _classCallCheck(this, Recipe);
+  this.recipeName = recipeName;
+  this.calories = calories;
+  this.ingredients = ingredients;
+});
+
 
 /***/ }),
 
@@ -789,4 +889,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle579cff8293dd62ec8ea1.js.map
+//# sourceMappingURL=bundled82f410f754d3bc5f205.js.map
