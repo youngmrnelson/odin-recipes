@@ -22,7 +22,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="css/main.css" />
-  <script defer src="bundleb87c0e55ff86d3d65407.js"></script></head>
+  <script defer src="bundle579cff8293dd62ec8ea1.js"></script></head>
   <body>
     <!-- Navigation -->
     <nav class="nav py-0 pi-2">
@@ -331,10 +331,13 @@
               placeholder="Enter the name of a dish..."
             />
             <button type="submit" class="btn btn-main p-1">Search</button>
-            <button class="btn btn-main p-1">Library</button>
-            <button class="btn btn-main p-1">Add Recipe</button>
+            <button class="btn btn-main btn-library p-1">Library</button>
+            <button class="btn btn-main btn-create-recipe p-1">
+              Add Recipe
+            </button>
           </header>
-          <div class="recipe-search-details">
+          <!-- Recipe Search Details -->
+          <div class="recipe-search-details hidden">
             <img
               src="recipe-of-day-1.jpg"
               alt=""
@@ -397,7 +400,53 @@
               </button>
             </article>
           </div>
-          <div class="recipe-search-library"></div>
+          <!-- Recipe Search Library -->
+          <div class="recipe-search-library">
+            <!-- Recipe Search Form -->
+            <form action="#" class="ta-c p-3 bg-light hidden" id="recipe-form">
+              <fieldset class="flex flex-fd--c gap-3">
+                <legend class="mb-3 p-step-title bottom-line">
+                  Describe your recipe
+                </legend>
+                <label for="name" class="p-main"
+                  >Recipe Name:
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="p-0"
+                    placeholder="e.g. Salad..."
+                    required
+                /></label>
+                <label for="calories" class="p-main"
+                  >Total Calories:
+                  <input
+                    type="number"
+                    id="calories"
+                    name="calories"
+                    class="p-0"
+                    placeholder="e.g. 112 Calories..."
+                    required
+                /></label>
+                <label for="ingredients" class="p-main"
+                  >Total Ingredients:
+                  <input
+                    type="number"
+                    id="ingredients"
+                    name="ingredients"
+                    class="p-0"
+                    placeholder="e.g. 13 Ingredients..."
+                    required
+                /></label>
+                <input
+                  type="button"
+                  value="Add Recipe"
+                  class="btn btn-main"
+                  id="submit"
+                />
+              </fieldset>
+            </form>
+          </div>
         </div>
       </section>
     </main>

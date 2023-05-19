@@ -13,8 +13,8 @@ class App {
     { threshold: 0.75 }
   );
 
-  // DOM Variables
-  button = document.querySelector('.nav-btn');
+  // DOM Variables - Navigation
+  linkBtn = document.querySelector('.nav-btn');
 
   linksContainer = document.querySelector('.nav-links');
 
@@ -24,10 +24,32 @@ class App {
 
   stepImages = document.querySelectorAll('.img-step');
 
+  // DOM Variables - Recipe Library
+  openLibraryBtn = document.querySelector('btn-library');
+
+  createRecipeBtn = document.querySelector('.btn-create-recipe');
+
+  recipeDetailsEl = document.querySelector('.recipe-search-details');
+
+  recipeLibraryEl = document.querySelector('.recipe-search-library');
+
+  recipeSearchFormEl = document.getElementById('recipe-form');
+
+  recipeNameEl = document.getElementById('name');
+
+  recipeCaloriesEl = document.getElementById('calories');
+
+  recipeIngredientsEl = document.getElementById('ingredients');
+
+  submitRecipesBtn = document.getElementById('submit');
+
+  // Global Variables
+  myRecipes = [];
+
   constructor() {
     this.stepImages.forEach((img) => this.observer.observe(img));
-    // Event Listeners
-    this.button.addEventListener('click', this.#toggleMenu.bind(this));
+    // Event Listeners - Navigation / Icons
+    this.linkBtn.addEventListener('click', this.#toggleMenu.bind(this));
     this.icons.forEach((icon) => {
       // Add fade effect to hovered icon
       if (!icon.parentElement.classList.contains('nav-link')) {
@@ -36,6 +58,11 @@ class App {
       // Remove fade effect from icon
       icon.parentElement.addEventListener('mouseout', this.#removeFadeEffect);
     });
+    // Event Listeners - Recipe Library
+    this.createRecipeBtn.addEventListener(
+      'click',
+      this.#toggleRecipeForm.bind(this)
+    );
   }
 
   // Navigation Menu Functions
@@ -51,6 +78,16 @@ class App {
   #removeFadeEffect() {
     this.classList.remove('fa-fade');
   }
+
+  // Recipe Form Functions
+  #toggleRecipeForm() {
+    this.recipeSearchFormEl.classList.toggle('hidden');
+    this.recipeNameEl.value = '';
+    this.recipeCaloriesEl.value = '';
+    this.recipeIngredientsEl.value = '';
+  }
+
+  #createRecipe() {}
 }
 
 export default new App();

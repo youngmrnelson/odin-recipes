@@ -12,7 +12,7 @@ const submitRecipeBtn = document.getElementById('submit');
 const myRecipes = [];
 
 // Recipes Constructor
-class Recipe {
+export default class Recipe {
   constructor(recipeName, calories, ingredients) {
     this.recipeName = recipeName;
     this.calories = calories;
