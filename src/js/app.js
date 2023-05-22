@@ -107,7 +107,7 @@ class App {
       const { recipes } = await res.json();
       this.#renderRecipeOfTheDay(recipes[0]);
     } catch (error) {
-      console.log(error);
+      throw new Error(error);
     }
   }
 
@@ -140,6 +140,14 @@ class App {
         </figure>
     `;
     this.recipesOfTheDayContainer.insertAdjacentHTML('beforeend', html);
+
+    const addBtns = document.querySelectorAll('.btn-add-recipe');
+    addBtns.forEach((addBtn) => {
+      addBtn.addEventListener('click', () => {
+        this.#myRecipes.push(recipe);
+        this.#createRecipeCard();
+      });
+    });
   };
 
   // Recipe Form Functions
