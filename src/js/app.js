@@ -26,6 +26,9 @@ class App {
 
   stepImages = document.querySelectorAll('.img-step');
 
+  // DOM Variables - Recipes of the Day
+  recipesOfTheDayContainer = document.getElementById('recipes-of-the-day');
+
   // DOM Variables - Recipe Library
   openLibraryBtn = document.querySelector('.btn-library');
 
@@ -52,6 +55,9 @@ class App {
 
   constructor() {
     this.stepImages.forEach((img) => this.observer.observe(img));
+    this.#getRecipesOfTheDay();
+    this.#getRecipesOfTheDay();
+    this.#getRecipesOfTheDay();
     // Event Listeners - Navigation / Icons
     this.linkBtn.addEventListener('click', this.#toggleMenu.bind(this));
     this.icons.forEach((icon) => {
@@ -87,6 +93,54 @@ class App {
   #removeFadeEffect() {
     this.classList.remove('fa-fade');
   }
+
+  // Recipe of the Day Functions
+  async #getRecipesOfTheDay() {
+    try {
+      // API Key
+      const apiKey = '15bbf13471dc4f97abbef21174b3dd7b';
+      // Recipe Data
+      const res = await fetch(
+        `https://api.spoonacular.com/recipes/random?apiKey=${apiKey}`,
+        { method: 'GET' }
+      );
+      const { recipes } = await res.json();
+      this.#renderRecipeOfTheDay(recipes[0]);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  #renderRecipeOfTheDay = (recipe) => {
+    const html = `
+        <figure class="recipe p-2 n-auto-mobile">
+        <img
+            src="${recipe.image}"
+            alt="${recipe.title}"
+            class="img recipe-img"
+        />
+        <article class="recipe-title-container">
+            <p class="recipe-title py-0">${recipe.title}</p>
+            <p class="recipe-stat py-0">
+            <span class="recipe-stat-alt">${recipe.healthScore}</span> Health Score
+            </p>
+            <p class="recipe-stat py-0">
+            <span class="recipe-stat-alt">${recipe.extendedIngredients.length}</span> Ingredients
+            </p>
+            <a href="${recipe.sourceUrl}" target="_blank" class="recipe-link py-0"
+            >Full Recipe</a
+            >
+        </article>
+        <button
+            class="btn btn-main btn-add-recipe p-1"
+            aria-label="Add recipe to library"
+        >
+            +
+        </button>
+        </figure>
+    `;
+    this.recipesOfTheDayContainer.insertAdjacentHTML('beforeend', html);
+  };
 
   // Recipe Form Functions
   #toggleRecipeForm() {
