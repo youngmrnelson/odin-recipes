@@ -159,6 +159,7 @@ class App {
   }
 
   #createRecipe() {
+    // NEED TO REFACTOR
     const recipeName = this.recipeNameEl.value;
     const calories = this.recipeCaloriesEl.value;
     const ingredients = this.recipeIngredientsEl.value;
@@ -172,27 +173,34 @@ class App {
     }
     this.#myRecipes.forEach((recipe, index) => {
       const html = `
-      <!-- Recipe Card -->
-            <figure class="recipe p-2">
-              <img
-                src="images/recipes/recipe-of-day-1.jpg"
-                alt=""
+            <figure class="recipe p-2 n-auto-mobile">
+            <img
+                src="${recipe.image}"
+                alt="${recipe.title}"
                 class="img recipe-img"
-              />
-              <article class="recipe-title-container">
-                <p class="recipe-title py-0">${recipe.recipeName}</p>
+            />
+            <article class="recipe-title-container">
+                <p class="recipe-title py-0">${recipe.title}</p>
                 <p class="recipe-stat py-0">
-                  <span class="recipe-stat-alt">${recipe.calories}</span> Calories
+                <span class="recipe-stat-alt">${
+                  recipe?.healthScore ?? 0
+                }</span> Health Score
                 </p>
                 <p class="recipe-stat py-0">
-                  <span class="recipe-stat-alt">${recipe.ingredients}</span> Ingredients
+                <span class="recipe-stat-alt">${
+                  recipe.extendedIngredients.length
+                }</span> Ingredients
                 </p>
-                <button class="btn recipe-link py-0">Full Recipe</button>
-                <button class="btn p-main btn-delete py-0">
-                  Delete Recipe
-                </button>
-              </article>
-            </figure>
+                <a href="${
+                  recipe?.sourceUrl ?? this.#viewRecipeDetails()
+                }" target="${recipe?.sourceUrl ? "_blank" : ""}" class="recipe-link py-0"
+                >Full Recipe</a
+                >
+            <button class="btn p-main btn-delete py-0">
+              Delete Recipe
+            </button>
+          </article>
+        </figure>
       `;
       this.recipesContainerEl.insertAdjacentHTML('afterbegin', html);
 
@@ -220,6 +228,10 @@ class App {
   #openLibrary() {
     this.recipeDetailsEl.classList.toggle('hidden');
     this.recipeLibraryEl.classList.toggle('hidden');
+  }
+
+  #viewRecipeDetails() {
+    this.#openLibrary();
   }
 }
 
