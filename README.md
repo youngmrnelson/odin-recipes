@@ -10,7 +10,7 @@ A recipes website built using HTML. This project came from [The Odin Project's F
 
 ## Demo
 
-Live Preview
+[Live Preview](https://youngmrnelson.github.io/odin-recipes/)
 
 ## Installation
 
