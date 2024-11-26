@@ -1,3 +1,4 @@
+/* General Text */
 h1,
 h2,
 h3,
@@ -7,4 +8,21 @@ a,
 q,
 li {
   font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+ul,
+li {
+  line-height: 1.5;
 }
