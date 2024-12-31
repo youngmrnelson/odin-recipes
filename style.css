@@ -1,3 +1,11 @@
+:root {
+  --odin-primary: #e3b261;
+  --odin-secondary: #0f766e;
+  --text-main: #374151;
+  --text-secondary: #6b7280;
+  --bg-gray: #f9fafb;
+}
+
 /* General Text */
 h1,
 h2,
