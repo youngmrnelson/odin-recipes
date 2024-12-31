@@ -7,6 +7,7 @@
 * {
   color: #333;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
 }
 
 body {
@@ -14,29 +15,30 @@ body {
 }
 
 .heading {
-  font-size: 64px;
+  font-size: 48px;
   font-weight: 800;
 }
 
 .subheading {
   color: var(--odin-primary);
   display: block;
-  font-size: 24px;
+  font-size: 20px;
   font-style: italic;
 }
 
-.subheading::before,
-.subheading::after {
+.quote-text::before,
+.quote-text::after {
   content: '"';
   font-weight: bold;
 }
 
-.subheading-alt {
-  font-size: 20px;
+.subheading-alt,
+.subheading-alt-link {
+  font-size: 22px;
 }
 
 .subheading-alt-link {
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .subheading-alt-link:hover {
@@ -49,15 +51,13 @@ a {
   text-decoration: none;
 }
 
-h1 {
-  font-size: 24px;
-}
-
-h2 {
-  font-size: 22px;
-}
-
 ul,
-li {
+ol {
   line-height: 1.5;
+}
+
+ol li::marker,
+ul li::marker {
+  color: var(--odin-primary);
+  font-weight: 600;
 }
