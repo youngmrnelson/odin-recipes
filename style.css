@@ -1,28 +1,49 @@
 :root {
   --odin-primary: #e3b261;
   --odin-secondary: #0f766e;
-  --text-main: #374151;
-  --text-secondary: #6b7280;
   --bg-gray: #f9fafb;
 }
 
+* {
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: var(--bg-gray);
+}
+
 .heading {
-  color: var(--text-main);
-  font-family: Verdana, sans-serif;
-  font-size: 48px;
+  font-size: 64px;
+  font-weight: 800;
+}
+
+.subheading {
+  color: var(--odin-primary);
+  display: block;
+  font-size: 24px;
+  font-style: italic;
+}
+
+.subheading::before,
+.subheading::after {
+  content: '"';
+  font-weight: bold;
+}
+
+.subheading-alt {
+  font-size: 20px;
+}
+
+.subheading-alt-link {
+  font-weight: 800;
+}
+
+.subheading-alt-link:hover {
+  color: var(--odin-secondary);
 }
 
 /* General Text */
-h1,
-h2,
-h3,
-h4,
-p,
-a,
-q,
-li {
-  /* font-family: sans-serif; */
-}
 
 a {
   text-decoration: none;
