@@ -6,6 +6,12 @@
   --bg-gray: #f9fafb;
 }
 
+.heading {
+  color: var(--text-main);
+  font-family: Verdana, sans-serif;
+  font-size: 48px;
+}
+
 /* General Text */
 h1,
 h2,
@@ -15,7 +21,7 @@ p,
 a,
 q,
 li {
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
 }
 
 a {
