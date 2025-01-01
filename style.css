@@ -1,3 +1,4 @@
+/* General Styling */
 :root {
   --odin-primary: #e3b261;
   --odin-secondary: #0f766e;
@@ -14,6 +15,23 @@ body {
   background-color: var(--bg-gray);
 }
 
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  line-height: 1.5;
+}
+
+ol li::marker,
+ul li::marker {
+  color: var(--odin-primary);
+  font-weight: 600;
+}
+
+/* Heading */
 .heading {
   font-size: 48px;
   font-weight: 800;
@@ -43,21 +61,4 @@ body {
 
 .subheading-alt-link:hover {
   color: var(--odin-secondary);
-}
-
-/* General Text */
-
-a {
-  text-decoration: none;
-}
-
-ul,
-ol {
-  line-height: 1.5;
-}
-
-ol li::marker,
-ul li::marker {
-  color: var(--odin-primary);
-  font-weight: 600;
 }
