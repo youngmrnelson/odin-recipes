@@ -71,3 +71,14 @@ ul li::marker {
 .subheading-alt-link:hover {
   color: var(--odin-secondary);
 }
+
+/* Nav */
+.main-nav {
+  list-style-type: none;
+  position: fixed;
+  top: 0;
+  background-color: var(--odin-primary);
+  width: 175px;
+  height: 100%;
+  padding: 20px;
+}
