@@ -5,6 +5,11 @@
   --bg-gray: #f9fafb;
 }
 
+@font-face {
+  font-family: NorseBold;
+  src: url("font/norsebold.otf") format("opentype");
+}
+
 * {
   color: #333;
   font-family: Arial, Helvetica, sans-serif;
@@ -42,6 +47,7 @@ ul li::marker {
 }
 
 .heading {
+  font-family: NorseBold;
   font-size: 64px;
   font-weight: 800;
 }
