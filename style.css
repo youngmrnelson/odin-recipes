@@ -1,16 +1,16 @@
-/* Google Fonts */
+/* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@font-face {
+  font-family: NorseBold;
+  src: url("font/norsebold.otf") format("opentype");
+}
 
 /* General Styling */
 :root {
   --odin-primary: #e3b261;
   --odin-secondary: #0f766e;
   --bg-gray: #f9fafb;
-}
-
-@font-face {
-  font-family: NorseBold;
-  src: url("font/norsebold.otf") format("opentype");
 }
 
 * {
@@ -51,8 +51,7 @@ ul li::marker {
 
 .heading {
   font-family: NorseBold;
-  font-size: 64px;
-  font-weight: 800;
+  font-size: 124px;
 }
 
 .subheading {
