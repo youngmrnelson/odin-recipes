@@ -82,3 +82,11 @@ ul li::marker {
   height: 100%;
   padding: 20px;
 }
+
+.main-nav-link {
+  margin: 64px 0;
+}
+
+.main-nav-link:hover {
+  font-weight: bold;
+}
