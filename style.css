@@ -57,12 +57,12 @@ ul li::marker {
 
 .heading-img {
   height: auto;
-  width: 350px;
+  width: 425px;
+  border: thick double var(--odin-primary);
+  padding: 15px;
 }
 
 .subheading {
-  color: var(--odin-primary);
-  display: block;
   font-size: 28px;
   font-weight: 400;
 }
