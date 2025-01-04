@@ -211,8 +211,8 @@ ul li::marker {
 }
 
 .user-img {
-  height: 125px;
-  width: 125px;
+  height: 100px;
+  width: 100px;
   border-radius: 50%;
   border: thick double var(--odin-primary);
   object-fit: cover;
