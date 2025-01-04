@@ -51,7 +51,7 @@ ul li::marker {
 }
 
 .container {
-  margin: 0 auto;
+  margin: 128px auto;
   width: 80%;
 }
 
