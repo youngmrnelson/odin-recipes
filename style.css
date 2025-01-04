@@ -286,3 +286,13 @@ ul li::marker {
 .ingredients-list li {
   list-style-type: disc;
 }
+
+/* Footer */
+footer {
+  background-color: #fff;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+}
