@@ -50,6 +50,11 @@ ul li::marker {
   font-family: NorseBold, monospace;
 }
 
+.container {
+  margin: 0 auto;
+  width: 80%;
+}
+
 /* Main Nav */
 .main-nav,
 .dropdown-list {
@@ -222,7 +227,6 @@ ul li::marker {
   align-items: center;
   justify-content: center;
   margin-block: 64px;
-  gap: 24px;
 }
 
 .recipe-header-text {
@@ -230,6 +234,7 @@ ul li::marker {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  flex: 1;
 }
 
 .recipe-heading {
@@ -252,6 +257,9 @@ ul li::marker {
 
 .recipe-img {
   border-radius: 12px;
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
 }
 
 /* Main Section */
