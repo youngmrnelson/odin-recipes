@@ -207,8 +207,7 @@ ul li::marker {
 .main-img {
   width: auto;
   height: 400px;
-  padding-bottom: 12px;
-  border-bottom: 2px solid var(--odin-primary);
+  border-radius: 12px;
 }
 
 .user-img {
@@ -229,4 +228,17 @@ ul li::marker {
 
 .user-img-c {
   align-self: flex-end;
+}
+
+/* Main Section */
+.main-section {
+  text-align: center;
+  margin-block: 96px;
+}
+
+.section-heading {
+  display: inline-block;
+  font-family: NorseBold;
+  font-size: 32px;
+  border-bottom: 3px solid var(--odin-primary);
 }
