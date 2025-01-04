@@ -31,6 +31,10 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style-type: none;
+}
+
 ul,
 ol {
   line-height: 1.5;
@@ -108,7 +112,8 @@ ul li::marker {
 }
 
 /* Nav */
-.main-nav {
+.main-nav,
+.dropdown-list {
   background-color: #fff;
   border-bottom: 1px solid #eee;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.015);
@@ -147,6 +152,7 @@ ul li::marker {
 .main-nav-link {
   font-weight: 500;
   color: #808080;
+  padding: 8px 12px;
 }
 
 .main-nav-link:hover {
@@ -168,6 +174,25 @@ ul li::marker {
 .logo-img {
   height: auto;
   width: 36px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-list {
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+  /* margin-top: 10px; */
+  position: absolute;
+  background-color: #fff;
+  width: 150px;
+}
+
+.dropdown:hover .dropdown-list {
+  display: flex;
 }
 
 /* .main-nav {
