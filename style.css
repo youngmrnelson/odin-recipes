@@ -37,7 +37,7 @@ ul {
 
 ul,
 ol {
-  line-height: 1.5;
+  line-height: 2;
 }
 
 ol li::marker,
@@ -165,7 +165,7 @@ ul li::marker {
 
 .subheading-alt {
   font-size: 24px;
-  margin-bottom: 24px;
+  margin-block: 24px;
   border-bottom: 2px solid var(--odin-primary);
   display: inline-block;
 }
@@ -280,4 +280,9 @@ ul li::marker {
   font-family: NorseBold;
   font-size: 32px;
   border-bottom: 3px solid var(--odin-primary);
+}
+
+/* Ingredients List */
+.ingredients-list li {
+  list-style-type: disc;
 }
