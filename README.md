@@ -23,3 +23,18 @@ git clone https://github.com/youngmrnelson/odin-recipes.git
 ## Usage
 
 1. Open `index.html` in a web browser.
+
+## Acknowledgements & Resources
+
+### Colors:
+
+- [Open Color](https://yeun.github.io/open-color/)
+- [Tints & Shade Generator](https://maketintsandshades.com/)
+
+### Images:
+
+- [Jimmy Dean](https://unsplash.com/@jimmydean)
+
+### Recipes:
+
+- [AllRecipes](https://www.allrecipes.com/)
