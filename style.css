@@ -1,0 +1,33 @@
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+@font-face {
+  font-family: NorseBold;
+  src: url("font/norsebold.otf") format("opentype");
+}
+
+/* UNIVERSAL STYLING */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --odin-main: #e3b261;
+  --odin-dark: #cca057;
+  --odin-light: #e6ba71;
+  --odin-alt-main: #0f766e;
+  --odin-alt-dark: #0e6a63;
+  --odin-alt-light: #27847d;
+  --bg-light: #fcf7ef;
+  --dark: #212529;
+  --gray: #adb5bd;
+}
+
+/* GENERAL STYLING */
+body {
+  font-family: "Rubik", sans-serif;
+  color: var(--dark);
+  background-color: var(--bg-light);
+}

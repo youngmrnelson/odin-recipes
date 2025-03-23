@@ -26,6 +26,11 @@ git clone https://github.com/youngmrnelson/odin-recipes.git
 
 ## Acknowledgements & Resources
 
+### Fonts:
+
+- [Google Fonts](https://fonts.google.com/specimen/Rubik)
+- [DaFont](https://www.dafont.com/norse.font)
+
 ### Colors:
 
 - [Open Color](https://yeun.github.io/open-color/)
