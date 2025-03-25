@@ -30,6 +30,7 @@ body {
   font-family: "Source Sans 3", sans-serif;
   color: var(--dark);
   background-color: var(--bg-light);
+  border-bottom: 3px solid var(--odin-main);
 }
 
 .odin-font {
@@ -50,19 +51,28 @@ a:visited {
   width: 1200px;
   margin: 0 auto;
 }
+
+.btn:link,
+.btn:visited {
+  cursor: pointer;
+  padding: 8px 24px;
+  border-radius: 24px;
+  transition: 0.2s ease;
+}
 /* HERO SECTION */
 .hero {
   height: 100vh;
   padding: 12px 0;
-  background: radial-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.5)),
+  background: radial-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5)),
     url("img/homepage/hero-bg.jpg") center / cover;
 }
 
+/* NAVIGATION */
 .nav {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 24px;
+  gap: 32px;
   font-size: 18px;
 }
 
@@ -81,13 +91,12 @@ a:visited {
 .nav--link-logo-img {
   height: 36px;
   width: auto;
+  margin-right: 4px;
 }
 
 .nav--link:link,
 .nav--link:visited {
   color: #fff;
-  padding: 8px 12px;
-  border-radius: 16px;
   font-weight: 500;
   transition: 0.2s ease;
 }
@@ -103,5 +112,32 @@ a:visited {
 }
 
 .nav--link-git:hover {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+/* HERO HEADING */
+.hero--title-container {
+  text-align: center;
+  color: #fff;
+  height: 100%;
+}
+
+.hero--title {
+  font-size: 124px;
+}
+
+.hero--subtitle {
+  font-size: 24px;
+  margin-bottom: 44px;
+}
+
+.btn--hero:link,
+.btn--hero:visited {
+  font-size: 18px;
+  color: var(--dark);
+  background-color: var(--odin-main);
+}
+
+.btn--hero:hover {
+  background-color: var(--odin-light);
 }
