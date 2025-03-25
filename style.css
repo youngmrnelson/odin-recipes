@@ -195,13 +195,15 @@ a:visited {
 }
 
 .recipe--card {
-  width: 400px;
+  flex: 1;
+  width: 350px;
   border-radius: 24px 24px 0 0;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
 }
 
 .recipe--img {
-  width: 100%;
+  height: auto;
+  width: 350px;
   border-radius: 24px 24px 0 0;
 }
 
