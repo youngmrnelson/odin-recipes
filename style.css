@@ -22,7 +22,7 @@
   --odin-alt-light: #27847d;
   --bg-light: #fcf7ef;
   --dark: #212529;
-  --gray: #adb5bd;
+  --gray: #868e96;
 }
 
 /* GENERAL STYLING */
@@ -58,6 +58,31 @@ a:visited {
   padding: 8px 24px;
   border-radius: 24px;
   transition: 0.2s ease;
+}
+.section {
+  margin-block: 96px;
+}
+
+.section--header {
+  text-align: center;
+}
+
+.section--title {
+  font-size: 48px;
+  line-height: 1;
+}
+
+.section--title::before,
+.section--title::after {
+  content: " - ";
+  color: var(--odin-main);
+}
+
+.section--subtitle {
+  display: inline-block;
+  font-size: 24px;
+  color: var(--gray);
+  border-bottom: 2px solid var(--odin-main);
 }
 /* HERO SECTION */
 .hero {
@@ -124,6 +149,7 @@ a:visited {
 
 .hero--title {
   font-size: 124px;
+  line-height: 1;
 }
 
 .hero--subtitle {
