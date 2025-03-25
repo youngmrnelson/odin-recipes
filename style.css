@@ -29,8 +29,8 @@
 body {
   font-family: "Source Sans 3", sans-serif;
   color: var(--dark);
-  background-color: var(--bg-light);
   border-bottom: 3px solid var(--odin-main);
+  line-height: 1.5;
 }
 
 .odin-font {
@@ -65,6 +65,7 @@ a:visited {
 
 .section--header {
   text-align: center;
+  margin-bottom: 64px;
 }
 
 .section--title {
@@ -166,4 +167,28 @@ a:visited {
 
 .btn--hero:hover {
   background-color: var(--odin-light);
+}
+
+/* ABOUT SECTION */
+.about--container {
+  display: grid;
+  grid-template-columns: repeat(300px, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 8px;
+  grid-template-areas:
+    "img p1"
+    "img p2";
+}
+
+.about--img {
+  grid-area: img;
+  margin: 0 auto;
+}
+.about--p-1 {
+  grid-area: p1;
+  font-size: 18px;
+}
+.about--p-2 {
+  grid-area: p2;
+  font-size: 18px;
 }
