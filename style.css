@@ -26,11 +26,13 @@
 }
 
 /* GENERAL STYLING */
+html,
 body {
   font-family: "Source Sans 3", sans-serif;
   color: var(--dark);
   border-bottom: 3px solid var(--odin-main);
   line-height: 1.5;
+  scroll-behavior: smooth;
 }
 
 .odin-font {
@@ -191,4 +193,11 @@ a:visited {
 .about--p-2 {
   grid-area: p2;
   font-size: 18px;
+}
+
+/* FOOTER SECTION */
+.footer {
+  background-color: var(--bg-light);
+  text-align: center;
+  padding: 0 12px;
 }
