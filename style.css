@@ -92,7 +92,7 @@ a:visited {
 .hero {
   height: 100vh;
   padding: 12px 0;
-  background: radial-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5)),
+  background: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
     url("img/homepage/hero-bg.jpg") center / cover;
   border-bottom: 1px solid var(--odin-main);
 }
@@ -146,7 +146,13 @@ a:visited {
 }
 
 /* HERO HEADING */
+.hero--container {
+  display: flex;
+  flex-direction: column;
+}
+
 .hero--title-container {
+  margin-top: 124px;
   text-align: center;
   color: #fff;
   height: 100%;
@@ -155,11 +161,13 @@ a:visited {
 .hero--title {
   font-size: 124px;
   line-height: 1;
+  text-shadow: 0 2px 0 #000;
 }
 
 .hero--subtitle {
   font-size: 24px;
   margin-bottom: 44px;
+  text-shadow: 0 1px 0 #000;
 }
 
 .btn--hero:link,
