@@ -176,6 +176,21 @@ a:visited {
   background-color: var(--odin-light);
 }
 
+/* MAIN SECTION */
+.main {
+  position: relative;
+}
+
+.main--icon {
+  height: 100vh;
+  position: absolute;
+  right: -250px;
+  top: -100px;
+  fill: var(--odin-main);
+  opacity: 0.5;
+  z-index: -100;
+}
+
 /* ABOUT SECTION */
 .about--link {
   color: var(--odin-dark);
@@ -269,7 +284,6 @@ a:visited {
 
 /* FOOTER SECTION */
 .footer {
-  background-color: var(--bg-light);
   text-align: center;
   padding: 8px 0;
 }
